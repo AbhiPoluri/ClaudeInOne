@@ -1,0 +1,25 @@
+{
+  "name": "claudeinone-cli",
+  "version": "1.0.0",
+  "description": "ClaudeInOne installer and management CLI",
+  "type": "module",
+  "bin": {
+    "co": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "smoke": "bash ./scripts/smoke.sh",
+    "dev": "bun run src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "engines": {
+    "bun": ">=1.1.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.6",
+    "typescript": "^5.6.3"
+  }
+}
