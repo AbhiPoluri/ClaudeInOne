@@ -1,0 +1,14 @@
+# Source
+src/
+*.ts
+!dist/**/*.d.ts
+
+# Config
+tsconfig.json
+
+# Dev scripts
+scripts/
+
+# Misc
+.DS_Store
+*.log

@@ -149,7 +149,7 @@ Spawn specialized agents for:
 
 ## Important Rules
 
-✅ **DO**
+- **DO**
 - Ask clarifying questions before starting
 - Create implementation plans for non-trivial changes
 - Write tests alongside code
@@ -157,7 +157,7 @@ Spawn specialized agents for:
 - Handle errors explicitly
 - Monitor performance impact
 
-❌ **DON'T**
+- **DON'T**
 - Make destructive changes without confirmation
 - Commit code without user approval
 - Skip tests

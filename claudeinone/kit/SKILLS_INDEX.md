@@ -179,10 +179,10 @@
 - **Resource Links** for deeper learning
 
 Every skill includes:
-✓ Setup instructions
-✓ Real, functional code
-✓ Common patterns
-✓ Best practices
-✓ Performance tips
-✓ Security measures
-✓ Resource references
+* Setup instructions
+* Real, functional code
+* Common patterns
+* Best practices
+* Performance tips
+* Security measures
+* Resource references

@@ -1,7 +1,7 @@
 {
   "name": "claudeinone-cli",
   "version": "1.0.0",
-  "description": "ClaudeInOne installer and management CLI",
+  "description": "Production-grade Claude Code framework — 213 skills, 37 agents, 95 /co: commands",
   "type": "module",
   "bin": {
     "co": "dist/index.js"
@@ -13,7 +13,29 @@
     "start": "node dist/index.js"
   },
   "engines": {
-    "bun": ">=1.1.0"
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "llm",
+    "developer-tools",
+    "cli",
+    "framework",
+    "skills",
+    "agents",
+    "commands"
+  ],
+  "author": "Abhi Poluri",
+  "license": "MIT",
+  "homepage": "https://github.com/AbhiPoluri/ClaudeInOne",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbhiPoluri/ClaudeInOne.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbhiPoluri/ClaudeInOne/issues"
   },
   "dependencies": {
     "commander": "^12.1.0"

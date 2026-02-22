@@ -25,7 +25,7 @@ export async function runVersions(): Promise<void> {
   console.log(`kit-bundled: ${kit?.version ?? "unknown"}`);
 
   try {
-    const { stdout } = await execFileAsync("npm", ["view", "claudekit-cli", "versions", "--json"], { timeout: 10_000 });
+    const { stdout } = await execFileAsync("npm", ["view", "claudeinone-cli", "versions", "--json"], { timeout: 10_000 });
     const parsed = JSON.parse(stdout.trim()) as string[] | string;
     const versions = Array.isArray(parsed) ? parsed : [parsed];
     const latest = versions[versions.length - 1];

@@ -1,270 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Documentation and Capabilities of the claudeinone framework.">
+    <meta name="description" content="Documentation for the claudeinone framework — 213 skills, 37 agents, 95 commands.">
     <title>Docs | claudeinone</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="docs-body">
-    <div class="docs-container">
-
-        <!-- Header Nav -->
-        <header class="docs-nav">
-            <div class="docs-nav-left">
-                <div class="docs-nav-logo">
-                    <div class="docs-nav-mark">C</div>
-                    <div class="docs-nav-brand">ClaudeInOne</div>
-                </div>
-                <div class="docs-nav-slash">/</div>
-                <div class="docs-nav-section">Docs</div>
+    <div class="terminal-container docs-terminal">
+        <div class="terminal-header">
+            <div class="mac-buttons">
+                <span class="btn close"></span>
+                <span class="btn minimize"></span>
+                <span class="btn maximize"></span>
             </div>
-
-            <div class="docs-nav-right">
-                <nav class="docs-nav-links">
-                    <a href="#skills">Skills</a>
-                    <a href="#commands">Commands</a>
-                    <a href="https://github.com/AbhiPoluri/claudeinone" target="_blank">GitHub ↗</a>
-                </nav>
-                <div class="docs-nav-btn">co init</div>
+            <div class="terminal-title">claudeinone — docs</div>
+            <div class="theme-wrapper">
+                <svg class="theme-icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <label class="theme-switch" title="Toggle Light/Dark Theme">
+                    <input type="checkbox" class="theme-checkbox">
+                    <div class="slider round"></div>
+                </label>
+                <svg class="theme-icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
             </div>
-        </header>
+        </div>
 
-        <div class="docs-main-area">
-            <!-- Sidebar -->
-            <aside class="docs-sidebar">
-                <a href="index.html" class="back-link">&larr; Back to Terminal</a>
-
-                <div class="sb-section">
-                    <div class="sb-title">GETTING STARTED</div>
-                    <ul class="sb-links">
-                        <li><a href="#introduction" class="active">Introduction</a></li>
-                        <li><a href="#installation">Installation</a></li>
-                        <li><a href="#first-command">Your First Command</a></li>
-                        <li><a href="#file-tree">What Gets Installed</a></li>
-                    </ul>
-                </div>
-
-                <div class="sb-section">
-                    <div class="sb-title">CAPABILITIES</div>
-                    <ul class="sb-links">
-                        <li><a href="#skills">Skills Library (213)</a></li>
-                        <li><a href="#agents">Specialist Agents (37)</a></li>
-                        <li><a href="#commands">Slash Commands (95)</a></li>
-                    </ul>
-                </div>
-
-                <div class="sb-section">
-                    <div class="sb-title">USE CASES</div>
-                    <ul class="sb-links">
-                        <li><a href="#workflows">Example Workflows</a></li>
-                    </ul>
-                </div>
-            </aside>
-
-            <!-- Main Content -->
-            <main class="docs-content">
-                <div class="docs-breadcrumb">Docs / Getting Started / Introduction</div>
-
-                <section id="introduction">
-                    <h1 class="docs-h1">Introduction</h1>
-                    <p class="docs-lead">ClaudeInOne is a production-grade framework for Claude Code. It installs 213
-                        real skill guides, 37 specialist agents, and 95 namespaced <code>/co:</code> commands into any
-                        project — giving Claude expert-level knowledge across every major framework, pattern, and
-                        deployment strategy.</p>
-
-                    <div class="docs-callout warning">
-                        <span class="callout-icon">ℹ</span>
-                        <p>Claude Code built-ins (<code>/help</code>, <code>/clear</code>, <code>/init</code>,
-                            <code>/memory</code>...) are unchanged. <code>/co:</code> prefix = ClaudeInOne.
-                        </p>
+        <div class="docs-container">
+            <header class="docs-nav">
+                <div class="docs-nav-left">
+                    <div class="docs-nav-logo">
+                        <div class="docs-nav-mark">C</div>
+                        <div class="docs-nav-brand">ClaudeInOne</div>
                     </div>
-                </section>
+                    <div class="docs-nav-slash">/</div>
+                    <div class="docs-nav-section">Docs</div>
+                </div>
+                <div class="docs-nav-right">
+                    <nav class="docs-nav-links">
+                        <a href="#skills">Skills</a>
+                        <a href="#agents">Agents</a>
+                        <a href="#commands">Commands</a>
+                        <a href="https://github.com/AbhiPoluri/ClaudeInOne" target="_blank">GitHub &#8599;</a>
+                    </nav>
+                    <div class="docs-nav-btn">co init</div>
+                </div>
+            </header>
 
-                <section id="installation">
-                    <h2 class="docs-h2">Installation</h2>
-                    <p class="docs-desc">Install the CLI globally via npm, then run <code>co init</code> inside any
-                        project:</p>
+            <div class="docs-main-area">
+                <aside class="docs-sidebar">
+                    <a href="index.html" class="back-link">&larr; Back to Terminal</a>
+                    <div class="sb-section">
+                        <div class="sb-title">GETTING STARTED</div>
+                        <ul class="sb-links">
+                            <li><a href="#introduction" class="active">Introduction</a></li>
+                            <li><a href="#installation">Installation</a></li>
+                            <li><a href="#first-command">Your First Command</a></li>
+                            <li><a href="#file-tree">What Gets Installed</a></li>
+                        </ul>
+                    </div>
+                    <div class="sb-section">
+                        <div class="sb-title">CAPABILITIES</div>
+                        <ul class="sb-links">
+                            <li><a href="#skills">Skills Library (213)</a></li>
+                            <li><a href="#agents">Specialist Agents (37)</a></li>
+                            <li><a href="#commands">Slash Commands (95)</a></li>
+                        </ul>
+                    </div>
+                    <div class="sb-section">
+                        <div class="sb-title">USE CASES</div>
+                        <ul class="sb-links">
+                            <li><a href="#workflows">Example Workflows</a></li>
+                        </ul>
+                    </div>
+                </aside>
 
-                    <div class="docs-code-block">
-                        <pre><code>npm install -g claudeinone
+                <main class="docs-content">
+                    <div class="docs-breadcrumb">Docs / Getting Started / Introduction</div>
+
+                    <section id="introduction">
+                        <h1 class="docs-h1">Introduction</h1>
+                        <p class="docs-lead">ClaudeInOne is a production-grade framework for Claude Code. It installs 213 real skill guides, 37 specialist agents, and 95 namespaced <code>/co:</code> commands into any project &mdash; giving Claude expert-level knowledge across every major framework, pattern, and deployment strategy.</p>
+                        <div class="docs-callout warning">
+                            <span class="callout-icon">i</span>
+                            <p>Claude Code built-ins (<code>/help</code>, <code>/clear</code>, <code>/init</code>, <code>/memory</code>...) are unchanged. <code>/co:</code> prefix = ClaudeInOne.</p>
+                        </div>
+                    </section>
+
+                    <section id="installation">
+                        <h2 class="docs-h2">Installation</h2>
+                        <p class="docs-desc">Install the CLI globally, then run <code>co init</code> inside any project:</p>
+                        <div class="docs-code-block">
+                            <pre><code>npm install -g claudeinone-cli
 cd your-project
 co init</code></pre>
-                    </div>
-                </section>
+                        </div>
+                    </section>
 
-                <section id="first-command">
-                    <h2 class="docs-h2">Your First Command</h2>
-                    <p class="docs-desc">Open Claude Code in your project, then try any <code>/co:</code> command.
-                        Claude will read the matching skill and apply production patterns automatically:</p>
+                    <section id="first-command">
+                        <h2 class="docs-h2">Your First Command</h2>
+                        <p class="docs-desc">Open Claude Code in your project, then type any <code>/co:</code> command. Claude reads the matching skill and applies production patterns automatically:</p>
+                        <div class="docs-code-block terminal-style">
+                            <pre><code>> /co:cook add Stripe billing with subscription plans
+  Claude reads: saas-billing.md, auth-session.md
+  Writing app/api/checkout/route.ts ...
+  Writing app/api/webhooks/stripe/route.ts ...
+  * Checkout session with metadata
+  * Webhook handler with signature verification
+  * Customer portal route</code></pre>
+                        </div>
+                    </section>
 
-                    <div class="docs-code-block terminal-style">
-                        <pre><code>~ % claude
-Welcome to Claude Code!
+                    <section id="file-tree">
+                        <h2 class="docs-h2">What Gets Installed</h2>
+                        <p class="docs-desc">ClaudeInOne creates a <code>.claude</code> directory in your project root with skills, agents, and commands.</p>
+                        <div class="docs-code-block tree-style">
+                            <pre><code>project-root/
+├── CLAUDE.md                    # Master system prompt
+├── .claude/
+│   ├── .ck.json                 # Version metadata
+│   ├── skills/                  # 213 production skill guides
+│   ├── agents/                  # 37 specialist agents
+│   ├── commands/co/             # 95 /co: slash commands
+│   └── settings.json
+├── docs/
+├── plans/
+└── journals/</code></pre>
+                        </div>
+                    </section>
 
-> /co:bootstrap-react
-[Claude reading skill: frontend-react]
-I can help bootstrap a production React app. I will set up Vite, Tailwind v4, and Lucide icons...</code></pre>
-                    </div>
-                </section>
+                    <hr class="docs-divider">
 
-                <section id="file-tree">
-                    <h2 class="docs-h2">What Gets Installed</h2>
-                    <p class="docs-desc">ClaudeInOne creates a <code>.claude</code> directory in your project root with
-                        specialized agent files and markdown skill guides.</p>
-                    <div class="docs-code-block tree-style">
-                        <pre><code>project-root/
-└── .claude/
-    ├── .ck.json                # Project config
-    ├── agents/                 # System prompts
-    │   ├── ui-ux-designer.md
-    │   └── senior-backend.md
-    ├── commands/               # Slash commands
-    │   ├── plan/
-    │   ├── build/
-    │   └── fix/
-    └── skills/                 # Knowledge base
-        ├── frontend-react.md
-        └── database-postgres.md</code></pre>
-                    </div>
-                </section>
+                    <section id="skills">
+                        <h2 class="docs-h2">Skills Library <span class="section-count">213</span></h2>
+                        <p class="docs-desc">213 production-ready skill guides covering every major framework, pattern, and technology. Each skill contains real TypeScript implementations, not summaries.</p>
+                        <div class="skills-grid">
+                            
+<div class="skills-category">
+  <div class="cat-header"><h3>AI & LLM</h3><span class="cat-count">10</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">ai-anthropic</span><span class="skill-desc">chat, streaming, tool use, and vision.</span></div><div class="skill-item"><span class="skill-name">ai-context-engineering</span><span class="skill-desc">Context engineering is the practice of structuring information given to LLMs to maximize</span></div><div class="skill-item"><span class="skill-name">ai-gemini</span><span class="skill-desc">Multimodal AI model for text, images, and code generation.</span></div><div class="skill-item"><span class="skill-name">ai-langchain</span><span class="skill-desc">Framework for developing applications powered by language models.</span></div><div class="skill-item"><span class="skill-name">ai-llamaindex</span><span class="skill-desc">Framework for building production-grade LLM applications with data connectors and indexi</span></div><div class="skill-item"><span class="skill-name">ai-mcp-builder</span><span class="skill-desc">Build custom Model Context Protocol servers to extend Claude Code with your own tools, r</span></div><div class="skill-item"><span class="skill-name">ai-openai</span><span class="skill-desc">Access GPT models, embeddings, and other AI services.</span></div><div class="skill-item"><span class="skill-name">ai-prompt-engineering</span><span class="skill-desc">Techniques for effective LLM prompting and optimization.</span></div><div class="skill-item"><span class="skill-name">ai-rag</span><span class="skill-desc">Combining retrieval with language models for accurate, contextual responses.</span></div><div class="skill-item"><span class="skill-name">ai-vectordb</span><span class="skill-desc">Specialized databases for semantic search and AI applications.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Backend</h3><span class="cat-count">16</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">backend-dotnet</span><span class="skill-desc">Modern server-side development with strong typing, high performance, and excellent tooli</span></div><div class="skill-item"><span class="skill-name">backend-express</span><span class="skill-desc">Minimalist, unopinionated Node.js web framework for building APIs and web applications.</span></div><div class="skill-item"><span class="skill-name">backend-fastify</span><span class="skill-desc">Fast and low-overhead Node.js web framework for building APIs with built-in JSON schema </span></div><div class="skill-item"><span class="skill-name">backend-go</span><span class="skill-desc">Statically-typed, compiled language for building fast, concurrent backend services.</span></div><div class="skill-item"><span class="skill-name">backend-graphql</span><span class="skill-desc">Query language for APIs with strongly-typed schema and efficient data fetching.</span></div><div class="skill-item"><span class="skill-name">backend-grpc</span><span class="skill-desc">High-performance RPC framework using Protocol Buffers for efficient binary serialization</span></div><div class="skill-item"><span class="skill-name">backend-hono</span><span class="skill-desc">Lightweight, ultra-fast web framework for edge runtimes (Cloudflare Workers, Deno, Node.</span></div><div class="skill-item"><span class="skill-name">backend-java-spring</span><span class="skill-desc">Java framework for building production-grade applications with dependency injection and </span></div><div class="skill-item"><span class="skill-name">backend-nodejs-express</span><span class="skill-desc">Fast, unopinionated web application framework.</span></div><div class="skill-item"><span class="skill-name">backend-nodejs</span><span class="skill-desc">JavaScript runtime for building scalable backend services with async/await and event-dri</span></div><div class="skill-item"><span class="skill-name">backend-php-laravel</span><span class="skill-desc">PHP framework with elegant syntax for rapid web application development.</span></div><div class="skill-item"><span class="skill-name">backend-python-django</span><span class="skill-desc">Batteries-included Python web framework with ORM, admin, and built-in security.</span></div><div class="skill-item"><span class="skill-name">backend-python-fastapi</span><span class="skill-desc">Modern, fast Python web framework for building APIs with automatic documentation and typ</span></div><div class="skill-item"><span class="skill-name">backend-ruby-rails</span><span class="skill-desc">Convention-over-configuration framework for rapid web application development.</span></div><div class="skill-item"><span class="skill-name">backend-rust</span><span class="skill-desc">Systems language with memory safety without garbage collection, ideal for performance-cr</span></div><div class="skill-item"><span class="skill-name">backend-websockets</span><span class="skill-desc">Bidirectional real-time communication between client and server.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Frontend</h3><span class="cat-count">30</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">component-patterns</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">error-boundaries</span><span class="skill-desc">Catch JavaScript errors in React component trees and show fallback UI instead of crashin</span></div><div class="skill-item"><span class="skill-name">frontend-angular</span><span class="skill-desc">Angular is a full-featured TypeScript framework with dependency injection, RxJS reactivi</span></div><div class="skill-item"><span class="skill-name">frontend-astro</span><span class="skill-desc">Build fast, content-focused websites with zero JavaScript by default (islands architectu</span></div><div class="skill-item"><span class="skill-name">frontend-bundle-analysis</span><span class="skill-desc">Analyzing and reducing bundle sizes.</span></div><div class="skill-item"><span class="skill-name">frontend-forms</span><span class="skill-desc">Building robust, validated forms.</span></div><div class="skill-item"><span class="skill-name">frontend-htmx</span><span class="skill-desc">no JavaScript required for common patterns.</span></div><div class="skill-item"><span class="skill-name">frontend-nextjs</span><span class="skill-desc">Full-stack React framework with App Router, Server Actions, and server-side rendering.</span></div><div class="skill-item"><span class="skill-name">frontend-pwa</span><span class="skill-desc">PWAs use service workers, web manifests, and modern browser APIs to deliver app-like exp</span></div><div class="skill-item"><span class="skill-name">frontend-react-hooks</span><span class="skill-desc">Creating reusable component logic with hooks.</span></div><div class="skill-item"><span class="skill-name">frontend-react</span><span class="skill-desc">Modern React development with hooks, composition patterns, and performance optimization.</span></div><div class="skill-item"><span class="skill-name">frontend-remix-advanced</span><span class="skill-desc">Production patterns for Remix applications.</span></div><div class="skill-item"><span class="skill-name">frontend-remix</span><span class="skill-desc">Remix is a full-stack React framework focused on web standards, nested routing, and serv</span></div><div class="skill-item"><span class="skill-name">frontend-solid</span><span class="skill-desc">updates are compiled to precise DOM operations for maximum performance.</span></div><div class="skill-item"><span class="skill-name">frontend-state-management</span><span class="skill-desc">Managing state across components.</span></div><div class="skill-item"><span class="skill-name">frontend-state</span><span class="skill-desc">Patterns for managing client-side state: React Context for simple cases, Zustand for com</span></div><div class="skill-item"><span class="skill-name">frontend-svelte</span><span class="skill-desc">Compiler-based framework that writes less code with true reactivity.</span></div><div class="skill-item"><span class="skill-name">frontend-testing</span><span class="skill-desc">Test React components with React Testing Library, mock APIs with MSW, and run E2E tests </span></div><div class="skill-item"><span class="skill-name">frontend-vite</span><span class="skill-desc">Vite is a fast build tool using native ES modules in dev and Rollup for production build</span></div><div class="skill-item"><span class="skill-name">frontend-vue</span><span class="skill-desc">Progressive JavaScript framework with reactive data binding and component-based architec</span></div><div class="skill-item"><span class="skill-name">frontend-webpack</span><span class="skill-desc">Webpack is a module bundler with powerful code splitting, tree shaking, and plugin ecosy</span></div><div class="skill-item"><span class="skill-name">hooks-custom</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">web-accessibility-wcag</span><span class="skill-desc">Web Content Accessibility Guidelines compliance.</span></div><div class="skill-item"><span class="skill-name">web-astro</span><span class="skill-desc">Static site generator with partial hydration for fast, content-focused sites.</span></div><div class="skill-item"><span class="skill-name">web-html-css</span><span class="skill-desc">Core web technologies for structure and styling.</span></div><div class="skill-item"><span class="skill-name">web-htmx</span><span class="skill-desc">Modern interactions with HTML attributes.</span></div><div class="skill-item"><span class="skill-name">web-nextjs-advanced</span><span class="skill-desc">Advanced patterns and optimizations for Next.js applications.</span></div><div class="skill-item"><span class="skill-name">web-remix</span><span class="skill-desc">Full-stack framework for building modern web applications with React and TypeScript.</span></div><div class="skill-item"><span class="skill-name">web-seo</span><span class="skill-desc">Optimizing for search engines.</span></div><div class="skill-item"><span class="skill-name">web-svelte</span><span class="skill-desc">Reactive compiler for building user interfaces with minimal boilerplate.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Databases</h3><span class="cat-count">18</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">cache-redis</span><span class="skill-desc">In-memory data store for caching, sessions, and real-time data.</span></div><div class="skill-item"><span class="skill-name">caching-strategies</span><span class="skill-desc">Implementing effective caching.</span></div><div class="skill-item"><span class="skill-name">database-optimization</span><span class="skill-desc">Techniques for improving database performance.</span></div><div class="skill-item"><span class="skill-name">databases-transactions</span><span class="skill-desc">multiple operations succeed together or roll back entirely.</span></div><div class="skill-item"><span class="skill-name">db-cassandra</span><span class="skill-desc">Cassandra is a distributed NoSQL database designed for high write throughput, linear sca</span></div><div class="skill-item"><span class="skill-name">db-drizzle</span><span class="skill-desc">Lightweight TypeScript-first ORM with native async/await support and zero dependencies.</span></div><div class="skill-item"><span class="skill-name">db-dynamodb</span><span class="skill-desc">AWS DynamoDB is a fully managed NoSQL database optimized for high-scale, predictable-lat</span></div><div class="skill-item"><span class="skill-name">db-elasticsearch</span><span class="skill-desc">Distributed search and analytics engine.</span></div><div class="skill-item"><span class="skill-name">db-firebase-firestore</span><span class="skill-desc">Google's real-time database for rapid development.</span></div><div class="skill-item"><span class="skill-name">db-mongodb</span><span class="skill-desc">NoSQL document database for flexible schema design.</span></div><div class="skill-item"><span class="skill-name">db-mysql</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">db-neon</span><span class="skill-desc">Neon is serverless PostgreSQL with branching, autoscaling to zero, and a generous free t</span></div><div class="skill-item"><span class="skill-name">db-planetscale</span><span class="skill-desc">PlanetScale is a MySQL-compatible serverless database with Git-like branching and horizo</span></div><div class="skill-item"><span class="skill-name">db-postgresql</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">db-prisma</span><span class="skill-desc">Type-safe database ORM for Node.js and TypeScript with excellent DX.</span></div><div class="skill-item"><span class="skill-name">db-redis</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">db-sqlite</span><span class="skill-desc">Lightweight embedded database perfect for development and edge deployment.</span></div><div class="skill-item"><span class="skill-name">db-supabase</span><span class="skill-desc">Open-source Firebase alternative with PostgreSQL backend and real-time capabilities.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Auth & Security</h3><span class="cat-count">14</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">auth-clerk</span><span class="skill-desc">Clerk provides drop-in auth with React components, Next.js middleware, and a full user m</span></div><div class="skill-item"><span class="skill-name">auth-jwt</span><span class="skill-desc">Stateless authentication using digitally signed tokens.</span></div><div class="skill-item"><span class="skill-name">auth-lucia</span><span class="skill-desc">Simple and flexible authentication library for SvelteKit, Astro, and other frameworks.</span></div><div class="skill-item"><span class="skill-name">auth-nextauth</span><span class="skill-desc">Complete authentication solution for Next.js with built-in session management and OAuth </span></div><div class="skill-item"><span class="skill-name">auth-oauth</span><span class="skill-desc">Secure third-party authentication and authorization.</span></div><div class="skill-item"><span class="skill-name">auth-oauth2</span><span class="skill-desc">Industry-standard authorization framework for delegated access.</span></div><div class="skill-item"><span class="skill-name">auth-passkeys</span><span class="skill-desc">Passkeys use device biometrics (Touch ID, Face ID) for phishing-resistant, passwordless </span></div><div class="skill-item"><span class="skill-name">auth-session</span><span class="skill-desc">Server-side sessions store user state on the server, giving the client only an encrypted</span></div><div class="skill-item"><span class="skill-name">cors-security</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">jwt-tokens</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">oauth-integration</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">security-encryption</span><span class="skill-desc">Data encryption, hashing, and secure communication.</span></div><div class="skill-item"><span class="skill-name">security-owasp</span><span class="skill-desc">Common vulnerabilities and how to prevent them.</span></div><div class="skill-item"><span class="skill-name">security-secrets-rotation</span><span class="skill-desc">Automating secret updates and rotation.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Cloud & DevOps</h3><span class="cat-count">23</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">cloud-aws</span><span class="skill-desc">Cloud platform with EC2, S3, Lambda, DynamoDB, and RDS.</span></div><div class="skill-item"><span class="skill-name">cloud-azure</span><span class="skill-desc">Cloud platform with App Service, Functions, Cosmos DB, and SQL Database.</span></div><div class="skill-item"><span class="skill-name">cloud-cloudflare</span><span class="skill-desc">Edge computing platform with Workers, KV, and D1 database.</span></div><div class="skill-item"><span class="skill-name">cloud-fly</span><span class="skill-desc">Fly.io runs Docker containers globally across 30+ regions with anycast networking and bu</span></div><div class="skill-item"><span class="skill-name">cloud-gcp</span><span class="skill-desc">Managed cloud services with Compute Engine, Cloud Functions, Firestore, and BigQuery.</span></div><div class="skill-item"><span class="skill-name">cloud-railway</span><span class="skill-desc">Simple cloud platform for deploying full-stack applications.</span></div><div class="skill-item"><span class="skill-name">cloud-render</span><span class="skill-desc">Simple cloud platform with generous free tier.</span></div><div class="skill-item"><span class="skill-name">cloud-serverless</span><span class="skill-desc">Serverless runs functions on demand with automatic scaling and pay-per-execution pricing</span></div><div class="skill-item"><span class="skill-name">cloud-vercel</span><span class="skill-desc">Serverless platform optimized for Next.js and edge functions.</span></div><div class="skill-item"><span class="skill-name">devops-ci-cd</span><span class="skill-desc">Automated testing, building, and deployment.</span></div><div class="skill-item"><span class="skill-name">devops-database-backup</span><span class="skill-desc">Automated backup strategies and recovery procedures.</span></div><div class="skill-item"><span class="skill-name">devops-docker</span><span class="skill-desc">Containerization platform for packaging applications with dependencies.</span></div><div class="skill-item"><span class="skill-name">devops-github-actions</span><span class="skill-desc">CI/CD workflow automation for GitHub repositories.</span></div><div class="skill-item"><span class="skill-name">devops-health-checks</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">devops-kubernetes</span><span class="skill-desc">Container orchestration platform for deploying and scaling containerized applications.</span></div><div class="skill-item"><span class="skill-name">devops-logging</span><span class="skill-desc">Centralized logging, log aggregation, and analysis.</span></div><div class="skill-item"><span class="skill-name">devops-monitoring</span><span class="skill-desc">Application performance monitoring, metrics, and alerting.</span></div><div class="skill-item"><span class="skill-name">devops-pulumi</span><span class="skill-desc">Define cloud infrastructure as TypeScript/Python/Go code instead of YAML. Pulumi uses re</span></div><div class="skill-item"><span class="skill-name">devops-secrets</span><span class="skill-desc">Secure storage and retrieval of API keys, credentials, and tokens.</span></div><div class="skill-item"><span class="skill-name">devops-terraform</span><span class="skill-desc">Declarative infrastructure provisioning across cloud providers.</span></div><div class="skill-item"><span class="skill-name">infrastructure-docker-compose</span><span class="skill-desc">Multi-container application orchestration.</span></div><div class="skill-item"><span class="skill-name">infrastructure-serverless</span><span class="skill-desc">Building applications without managing servers.</span></div><div class="skill-item"><span class="skill-name">serverless-framework</span><span class="skill-desc">Framework for building and deploying serverless applications across AWS, Azure, GCP, and</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Testing</h3><span class="cat-count">12</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">test-e2e</span><span class="skill-desc">Full-stack testing using Playwright or Cypress to test complete user workflows.</span></div><div class="skill-item"><span class="skill-name">test-integration</span><span class="skill-desc">Testing interactions between multiple components and external services.</span></div><div class="skill-item"><span class="skill-name">test-performance</span><span class="skill-desc">Load testing, stress testing, and performance profiling.</span></div><div class="skill-item"><span class="skill-name">test-tdd</span><span class="skill-desc">Writing tests before implementation for better code design.</span></div><div class="skill-item"><span class="skill-name">test-unit</span><span class="skill-desc">Write isolated tests for individual functions and components using Jest and Vitest.</span></div><div class="skill-item"><span class="skill-name">testing-accessibility</span><span class="skill-desc">Ensuring applications are usable by everyone.</span></div><div class="skill-item"><span class="skill-name">testing-contract</span><span class="skill-desc">Testing API contracts between services.</span></div><div class="skill-item"><span class="skill-name">testing-e2e-advanced</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">testing-load-stress</span><span class="skill-desc">Testing application behavior under load.</span></div><div class="skill-item"><span class="skill-name">testing-mutation</span><span class="skill-desc">Testing the quality of your tests.</span></div><div class="skill-item"><span class="skill-name">testing-snapshot</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">testing-vitest</span><span class="skill-desc">Lightning-fast unit test framework.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>UI & Styling</h3><span class="cat-count">11</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">styling-css-modules</span><span class="skill-desc">Scoped CSS with automatic naming and no conflicts.</span></div><div class="skill-item"><span class="skill-name">styling-styled-components</span><span class="skill-desc">CSS-in-JS library for component-scoped styling with full JavaScript support.</span></div><div class="skill-item"><span class="skill-name">styling-tailwind</span><span class="skill-desc">Utility-first CSS framework with rapid styling capabilities.</span></div><div class="skill-item"><span class="skill-name">ui-a11y</span><span class="skill-desc">screen readers, keyboard users, and people with disabilities.</span></div><div class="skill-item"><span class="skill-name">ui-framer</span><span class="skill-desc">Framer Motion is a production-ready animation library for React with declarative animati</span></div><div class="skill-item"><span class="skill-name">ui-gsap</span><span class="skill-desc">GSAP (GreenSock) is a professional-grade JavaScript animation library for high-performan</span></div><div class="skill-item"><span class="skill-name">ui-radix</span><span class="skill-desc">Radix UI provides unstyled, accessible, and composable React primitives for building cus</span></div><div class="skill-item"><span class="skill-name">ui-shadcn</span><span class="skill-desc">High-quality React component library built on Radix UI and Tailwind CSS for accessible i</span></div><div class="skill-item"><span class="skill-name">ui-tailwind</span><span class="skill-desc">Utility-first CSS framework for rapid UI development.</span></div><div class="skill-item"><span class="skill-name">ui-threejs</span><span class="skill-desc">for product visualizations, games, and immersive UIs.</span></div><div class="skill-item"><span class="skill-name">ui-tokens</span><span class="skill-desc">Design tokens are named variables for design decisions (colors, spacing, typography) tha</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>API Design</h3><span class="cat-count">12</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">analytics-segment</span><span class="skill-desc">Customer data platform for tracking events and traits.</span></div><div class="skill-item"><span class="skill-name">api-caching</span><span class="skill-desc">HTTP headers, CDN, Redis, and in-memory — to reduce latency and database load.</span></div><div class="skill-item"><span class="skill-name">api-documentation</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">api-graphql</span><span class="skill-desc">Query language for APIs with strong typing and efficient data fetching.</span></div><div class="skill-item"><span class="skill-name">api-openapi</span><span class="skill-desc">Document REST APIs with OpenAPI 3.x specs for auto-generated clients, validation, and in</span></div><div class="skill-item"><span class="skill-name">api-pagination-filtering</span><span class="skill-desc">Techniques for handling large datasets efficiently.</span></div><div class="skill-item"><span class="skill-name">api-rate-limiting</span><span class="skill-desc">Controlling request rates and protecting APIs.</span></div><div class="skill-item"><span class="skill-name">api-rest-advanced</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">api-rest</span><span class="skill-desc">Best practices for designing RESTful APIs.</span></div><div class="skill-item"><span class="skill-name">api-trpc</span><span class="skill-desc">End-to-end typesafe APIs using TypeScript.</span></div><div class="skill-item"><span class="skill-name">api-versioning</span><span class="skill-desc">Strategies for evolving APIs without breaking existing clients.</span></div><div class="skill-item"><span class="skill-name">api-webhooks</span><span class="skill-desc">Push-based communication for real-time integrations.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Architecture</h3><span class="cat-count">9</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">arch-clean-code</span><span class="skill-desc">Principles for writing maintainable, testable code.</span></div><div class="skill-item"><span class="skill-name">arch-clean</span><span class="skill-desc">Organize code in layers: Domain (core logic) → Application (use cases) → Infrastructure </span></div><div class="skill-item"><span class="skill-name">arch-cqrs</span><span class="skill-desc">Separate read and write models for scalability and clarity.</span></div><div class="skill-item"><span class="skill-name">arch-ddd</span><span class="skill-desc">DDD aligns software with business domains using aggregates, value objects, entities, and</span></div><div class="skill-item"><span class="skill-name">arch-event-driven</span><span class="skill-desc">Decouple services through asynchronous event publishing and consumption.</span></div><div class="skill-item"><span class="skill-name">arch-microservices</span><span class="skill-desc">Decompose applications into small, independent services communicating via APIs.</span></div><div class="skill-item"><span class="skill-name">arch-monorepo</span><span class="skill-desc">Host multiple apps and packages in one repo with shared code, tooling, and independent d</span></div><div class="skill-item"><span class="skill-name">arch-multi-tenant</span><span class="skill-desc">Multi-tenancy serves multiple organizations from a single application with isolated data</span></div><div class="skill-item"><span class="skill-name">arch-serverless</span><span class="skill-desc">Design patterns for building reliable serverless applications on AWS Lambda, Vercel, and</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>SaaS & Payments</h3><span class="cat-count">10</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">payment-lemonsqueezy</span><span class="skill-desc">Lemon Squeezy is a merchant of record payment platform with built-in tax handling, subsc</span></div><div class="skill-item"><span class="skill-name">payment-square</span><span class="skill-desc">Payment processing platform with in-store and online capabilities.</span></div><div class="skill-item"><span class="skill-name">payment-stripe</span><span class="skill-desc">Payment processing for subscriptions, charges, and invoices.</span></div><div class="skill-item"><span class="skill-name">saas-ab-testing</span><span class="skill-desc">Run controlled experiments to validate product decisions with statistical confidence.</span></div><div class="skill-item"><span class="skill-name">saas-analytics</span><span class="skill-desc">Track user behavior, product usage, and business metrics to drive data-informed decision</span></div><div class="skill-item"><span class="skill-name">saas-billing</span><span class="skill-desc">Implement subscription billing with Stripe: pricing plans, checkout, webhooks, and custo</span></div><div class="skill-item"><span class="skill-name">saas-email</span><span class="skill-desc">Send reliable transactional emails (welcome, password reset, receipts) using Resend with</span></div><div class="skill-item"><span class="skill-name">saas-feature-flags</span><span class="skill-desc">Control feature rollouts, kill switches, and A/B tests without code deployments.</span></div><div class="skill-item"><span class="skill-name">saas-onboarding</span><span class="skill-desc">Guide new users to their first value moment with checklists, product tours, and progress</span></div><div class="skill-item"><span class="skill-name">saas-user-onboarding</span><span class="skill-desc">Implementing effective user onboarding flows.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Mobile</h3><span class="cat-count">4</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">mobile-capacitor</span><span class="skill-desc">Capacitor converts web apps to native iOS/Android apps with access to native device APIs</span></div><div class="skill-item"><span class="skill-name">mobile-expo</span><span class="skill-desc">Expo provides a managed workflow for React Native apps targeting iOS, Android, and web.</span></div><div class="skill-item"><span class="skill-name">mobile-flutter</span><span class="skill-desc">Google's cross-platform framework for mobile, web, and desktop.</span></div><div class="skill-item"><span class="skill-name">mobile-react-native</span><span class="skill-desc">Cross-platform mobile development with JavaScript/TypeScript.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Performance</h3><span class="cat-count">6</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">perf-bundle</span><span class="skill-desc">Reduce JavaScript bundle size with code splitting, tree shaking, lazy loading, and depen</span></div><div class="skill-item"><span class="skill-name">perf-web-vitals</span><span class="skill-desc">Core Web Vitals (LCP, INP, CLS) measure real-user experience. Optimize them to improve S</span></div><div class="skill-item"><span class="skill-name">performance-database-connection-pooling</span><span class="skill-desc">Efficient database connection management.</span></div><div class="skill-item"><span class="skill-name">performance-metrics</span><span class="skill-desc">Track Core Web Vitals and custom metrics with real-user monitoring (RUM).</span></div><div class="skill-item"><span class="skill-name">performance-optimization</span><span class="skill-desc">Techniques for improving application speed and efficiency.</span></div><div class="skill-item"><span class="skill-name">performance-web-vitals</span><span class="skill-desc">Measuring and optimizing user experience metrics.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Tooling</h3><span class="cat-count">9</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">tooling-biome</span><span class="skill-desc">replaces ESLint + Prettier in one tool.</span></div><div class="skill-item"><span class="skill-name">tooling-build-tools</span><span class="skill-desc">Compilation, bundling, and asset optimization.</span></div><div class="skill-item"><span class="skill-name">tooling-bun</span><span class="skill-desc">Bun is a fast JavaScript runtime, package manager, bundler, and test runner in one tool.</span></div><div class="skill-item"><span class="skill-name">tooling-eslint</span><span class="skill-desc">ESLint statically analyzes JavaScript/TypeScript code to find bugs and enforce code styl</span></div><div class="skill-item"><span class="skill-name">tooling-git</span><span class="skill-desc">Branch strategies, commit conventions, and team workflows for effective version control.</span></div><div class="skill-item"><span class="skill-name">tooling-monorepo</span><span class="skill-desc">Organizing multiple related projects in a single repository.</span></div><div class="skill-item"><span class="skill-name">tooling-testing-frameworks</span><span class="skill-desc">Overview of popular testing tools and frameworks.</span></div><div class="skill-item"><span class="skill-name">tooling-typescript</span><span class="skill-desc">Typed superset of JavaScript with static type checking and excellent tooling.</span></div><div class="skill-item"><span class="skill-name">version-control-git</span><span class="skill-desc">Source code management and collaboration.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>i18n</h3><span class="cat-count">3</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">i18n-general</span><span class="skill-desc">Support multiple languages and locales in your application with proper translation manag</span></div><div class="skill-item"><span class="skill-name">i18n-localization</span><span class="skill-desc">Multi-language and locale support for applications.</span></div><div class="skill-item"><span class="skill-name">i18n-nextjs</span><span class="skill-desc">Add internationalization to Next.js with next-intl for type-safe translations and locale</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Real-time & Messaging</h3><span class="cat-count">7</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">messaging-kafka</span><span class="skill-desc">Distributed event streaming platform.</span></div><div class="skill-item"><span class="skill-name">messaging-rabbitmq</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">nodejs-streams</span><span class="skill-desc">Efficient data processing with streams.</span></div><div class="skill-item"><span class="skill-name">reactive-programming</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">realtime-database</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">realtime-subscriptions</span><span class="skill-desc">WebSockets and GraphQL subscriptions for live updates.</span></div><div class="skill-item"><span class="skill-name">websocket-server</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Patterns</h3><span class="cat-count">4</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">functional-programming</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">patterns-dependency-injection</span><span class="skill-desc">Managing dependencies and composing complex objects.</span></div><div class="skill-item"><span class="skill-name">patterns-factory-singleton</span><span class="skill-desc">Common patterns for software architecture.</span></div><div class="skill-item"><span class="skill-name">patterns-observer-pubsub</span><span class="skill-desc">Decoupled event-driven communication.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>SEO & Content</h3><span class="cat-count">5</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">content-management</span><span class="skill-desc">Building and managing content with headless CMS or self-hosted solutions.</span></div><div class="skill-item"><span class="skill-name">seo-content</span><span class="skill-desc">Optimize content for search intent, keyword targeting, and organic traffic growth.</span></div><div class="skill-item"><span class="skill-name">seo-technical</span><span class="skill-desc">Optimize crawlability, indexability, and page speed for better search engine rankings.</span></div><div class="skill-item"><span class="skill-name">writing-marketing</span><span class="skill-desc">landing pages, emails, and product messaging.</span></div><div class="skill-item"><span class="skill-name">writing-technical</span><span class="skill-desc">API docs, guides, tutorials, and READMEs that developers love.</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Other</h3><span class="cat-count">10</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">data-csv-excel</span><span class="skill-desc">Reading, writing, and manipulating spreadsheet files.</span></div><div class="skill-item"><span class="skill-name">file-storage</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">http-server</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">logging-winston</span><span class="skill-desc">Structured logging for Node.js applications.</span></div><div class="skill-item"><span class="skill-name">monitoring-apm</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">monitoring-error-tracking</span><span class="skill-desc">Catch and track errors in production applications.</span></div><div class="skill-item"><span class="skill-name">rate-limiting</span><span class="skill-desc">Protect APIs from abuse with per-IP or per-user rate limits using Redis.</span></div><div class="skill-item"><span class="skill-name">sharding-scaling</span><span class="skill-desc">Detailed installation and configuration steps for the technology.</span></div><div class="skill-item"><span class="skill-name">utilities-date-time</span><span class="skill-desc">Working with dates, timezones, and scheduling.</span></div><div class="skill-item"><span class="skill-name">validation-schemas</span><span class="skill-desc">Validating data structure and types.</span></div></div>
+</div>
+                        </div>
+                    </section>
 
-                <hr class="docs-divider">
+                    <hr class="docs-divider">
 
-                <section id="skills">
-                    <h2 class="docs-h2">Skills Library</h2>
-                    <p class="docs-desc">213 production-ready skill guides covering every major framework, pattern, and
-                        technology. Each skill contains real TypeScript implementations, not summaries.</p>
+                    <section id="agents">
+                        <h2 class="docs-h2">Specialist Agents <span class="section-count">37</span></h2>
+                        <p class="docs-desc">37 specialist agents with deep expertise, methodology, and domain knowledge. Each agent has a defined role, responsibilities, and invocation commands.</p>
+                        <div class="skills-grid">
+                            
+<div class="skills-category">
+  <div class="cat-header"><h3>Development</h3><span class="cat-count">6</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">backend-developer</span><span class="skill-desc">a specialist in building robust, scalable, and secure backend services, APIs, and data lay</span></div><div class="skill-item"><span class="skill-name">debugger</span><span class="skill-desc">an expert at systematically investigating issues, analyzing logs, and identifying root cau</span></div><div class="skill-item"><span class="skill-name">frontend-developer</span><span class="skill-desc">a specialist in building responsive, accessible, and performant user interfaces using Reac</span></div><div class="skill-item"><span class="skill-name">fullstack-developer</span><span class="skill-desc">a skilled implementation agent capable of writing production-quality code across the entir</span></div><div class="skill-item"><span class="skill-name">mobile-developer</span><span class="skill-desc">a specialist in building native and cross-platform mobile applications using React Native,</span></div><div class="skill-item"><span class="skill-name">planner</span><span class="skill-desc">an expert at breaking down ambitious projects into detailed, actionable implementation str</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Code Quality</h3><span class="cat-count">6</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">accessibility-auditor</span><span class="skill-desc">a WCAG compliance and inclusive design expert who ensures applications are usable by every</span></div><div class="skill-item"><span class="skill-name">code-reviewer</span><span class="skill-desc">a meticulous expert who ensures code quality, security, performance, and maintainability a</span></div><div class="skill-item"><span class="skill-name">performance-optimizer</span><span class="skill-desc">a deep expert in identifying and eliminating performance bottlenecks across frontend, back</span></div><div class="skill-item"><span class="skill-name">refactorer</span><span class="skill-desc">an expert at improving code structure, reducing technical debt, and modernizing codebases </span></div><div class="skill-item"><span class="skill-name">security-auditor</span><span class="skill-desc">an application security expert who identifies vulnerabilities, implements security control</span></div><div class="skill-item"><span class="skill-name">tester</span><span class="skill-desc">a quality assurance expert specializing in test strategy, test automation, and ensuring co</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Infrastructure</h3><span class="cat-count">5</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">database-admin</span><span class="skill-desc">a deep expert in database design, query optimization, migrations, and operations across SQ</span></div><div class="skill-item"><span class="skill-name">devops-engineer</span><span class="skill-desc">an infrastructure and automation expert who builds reliable, scalable, and secure deployme</span></div><div class="skill-item"><span class="skill-name">scalability-consultant</span><span class="skill-desc">an expert in designing systems that handle growth gracefully, from startup to millions of </span></div><div class="skill-item"><span class="skill-name">systems-designer</span><span class="skill-desc">an expert in distributed systems architecture, designing for scale, reliability, and maint</span></div><div class="skill-item"><span class="skill-name">technology-strategist</span><span class="skill-desc">an expert in technology evaluation, modernization roadmaps, and aligning technical decisio</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Research & Planning</h3><span class="cat-count">8</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">brainstormer</span><span class="skill-desc">expert at exploring alternative approaches, questioning assumptions, and sparking creative</span></div><div class="skill-item"><span class="skill-name">docs-manager</span><span class="skill-desc">an expert at creating, maintaining, and synchronizing technical documentation with code.</span></div><div class="skill-item"><span class="skill-name">git-manager</span><span class="skill-desc">expert at managing version control, commits, PRs, and deployment workflows.</span></div><div class="skill-item"><span class="skill-name">journal-writer</span><span class="skill-desc">responsible for documenting work sessions, decisions, and lessons learned.</span></div><div class="skill-item"><span class="skill-name">project-manager</span><span class="skill-desc">responsible for tracking progress, coordinating agents, and maintaining project visibility</span></div><div class="skill-item"><span class="skill-name">researcher</span><span class="skill-desc">an expert at conducting deep investigations into best practices, technologies, and pattern</span></div><div class="skill-item"><span class="skill-name">risk-analyst</span><span class="skill-desc">an expert in identifying, assessing, and mitigating technical, security, and business risk</span></div><div class="skill-item"><span class="skill-name">scout</span><span class="skill-desc">an expert at rapidly exploring codebases, locating relevant files, and identifying pattern</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Specialist</h3><span class="cat-count">6</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">api-designer</span><span class="skill-desc">an expert in designing clean, scalable, and developer-friendly APIs across REST, GraphQL, </span></div><div class="skill-item"><span class="skill-name">i18n-specialist</span><span class="skill-desc">an expert in internationalization, localization, and building multi-language, multi-region</span></div><div class="skill-item"><span class="skill-name">integration-specialist</span><span class="skill-desc">an expert in third-party service integrations, webhooks, OAuth flows, and API connectors.</span></div><div class="skill-item"><span class="skill-name">mcp-manager</span><span class="skill-desc">an expert in Model Context Protocol (MCP) servers, Claude Code tool configuration, and ext</span></div><div class="skill-item"><span class="skill-name">skill-creator</span><span class="skill-desc">an expert at building new ClaudeInOne skills, documenting technologies, and expanding the </span></div><div class="skill-item"><span class="skill-name">ui-ux-designer</span><span class="skill-desc">a product design expert specializing in user experience research, interface design, and de</span></div></div>
+</div>
+<div class="skills-category">
+  <div class="cat-header"><h3>Content & Marketing</h3><span class="cat-count">6</span></div>
+  <div class="cat-list"><div class="skill-item"><span class="skill-name">campaign-manager</span><span class="skill-desc">an expert in planning, executing, and measuring integrated marketing campaigns across digi</span></div><div class="skill-item"><span class="skill-name">content-creator</span><span class="skill-desc">an expert in creating compelling, engaging, and strategically-aligned content across all f</span></div><div class="skill-item"><span class="skill-name">copywriter</span><span class="skill-desc">a persuasion expert specializing in marketing copy, sales pages, email sequences, and conv</span></div><div class="skill-item"><span class="skill-name">email-wizard</span><span class="skill-desc">an expert in transactional email systems, marketing email campaigns, and email deliverabil</span></div><div class="skill-item"><span class="skill-name">seo-specialist</span><span class="skill-desc">an expert in technical SEO, content optimization, and building search-engine-optimized web</span></div><div class="skill-item"><span class="skill-name">social-media-manager</span><span class="skill-desc">an expert in building brand presence, creating engaging content, and growing audiences acr</span></div></div>
+</div>
+                        </div>
+                    </section>
 
-                    <div class="skills-grid">
-                        <div class="skills-category">
-                            <div class="cat-header">
-                                <h3>Backend</h3>
-                                <span class="cat-count">21</span>
+                    <hr class="docs-divider">
+
+                    <section id="commands">
+                        <h2 class="docs-h2">Commands Reference <span class="section-count">95</span></h2>
+                        <p class="docs-desc">All commands namespaced under <code>/co:</code> to distinguish them from Claude Code built-ins. Type any command inside Claude Code to activate it.</p>
+                        <div class="commands-sections">
+                            <div class="cmd-group"><h3 class="cmd-group-title">Plan</h3><div class="cmd-item"><div class="cmd-name">/co:plan-archive</div><div class="cmd-desc">Archive completed plans with outcome summaries.</div></div><div class="cmd-item"><div class="cmd-name">/co:plan-ci</div><div class="cmd-desc">Create a plan to fix CI issues without directly applying patches.</div></div><div class="cmd-item"><div class="cmd-name">/co:plan-cro</div><div class="cmd-desc">Plan conversion-rate optimization experiments.</div></div><div class="cmd-item"><div class="cmd-name">/co:plan-fast</div><div class="cmd-desc">Quick planning variant with reduced depth.</div></div><div class="cmd-item"><div class="cmd-name">/co:plan-hard</div><div class="cmd-desc">Exhaustive planning with deep research and edge-case coverage.</div></div><div class="cmd-item"><div class="cmd-name">/co:plan-parallel</div><div class="cmd-desc">Generate plan via parallel investigation tracks.</div></div><div class="cmd-item"><div class="cmd-name">/co:plan-two</div><div class="cmd-desc">Produce two contrasting implementation approaches and recommendation.</div></div><div class="cmd-item"><div class="cmd-name">/co:plan-validate</div><div class="cmd-desc">Assess an existing plan for feasibility and missing pieces.</div></div><div class="cmd-item"><div class="cmd-name">/co:plan</div><div class="cmd-desc">Create implementation-ready plan before coding.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Build</h3><div class="cmd-item"><div class="cmd-name">/co:ask</div><div class="cmd-desc">Advisory-only architecture consultation without implementation.</div></div><div class="cmd-item"><div class="cmd-name">/co:bootstrap-auto-fast</div><div class="cmd-desc">Speed-optimized autonomous bootstrap for rapid iteration.</div></div><div class="cmd-item"><div class="cmd-name">/co:bootstrap-auto-parallel</div><div class="cmd-desc">Autonomous bootstrap with parallelized sub-workstreams.</div></div><div class="cmd-item"><div class="cmd-name">/co:bootstrap-auto</div><div class="cmd-desc">Autonomous bootstrap flow with no clarification loop.</div></div><div class="cmd-item"><div class="cmd-name">/co:bootstrap</div><div class="cmd-desc">End-to-end project bootstrap with clarification, architecture planning, implementation, </div></div><div class="cmd-item"><div class="cmd-name">/co:cook</div><div class="cmd-desc">Structured delivery pipeline for a feature from plan to docs.</div></div><div class="cmd-item"><div class="cmd-name">/co:migrate</div><div class="cmd-desc">Create and apply data/schema migration safely.</div></div><div class="cmd-item"><div class="cmd-name">/co:mode</div><div class="cmd-desc">Switch assistant operational mode for this session.</div></div><div class="cmd-item"><div class="cmd-name">/co:new-feature</div><div class="cmd-desc">Plan and deliver a full feature lifecycle.</div></div><div class="cmd-item"><div class="cmd-name">/co:scaffold</div><div class="cmd-desc">Generate boilerplate for feature/module/route with project conventions.</div></div><div class="cmd-item"><div class="cmd-name">/co:spawn</div><div class="cmd-desc">Invoke a specific specialized agent manually.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Fix</h3><div class="cmd-item"><div class="cmd-name">/co:fix-ci</div><div class="cmd-desc">Diagnose and repair CI pipeline failures.</div></div><div class="cmd-item"><div class="cmd-name">/co:fix-fast</div><div class="cmd-desc">Quickly patch straightforward issues with minimal analysis.</div></div><div class="cmd-item"><div class="cmd-name">/co:fix-hard</div><div class="cmd-desc">Deep multi-agent remediation for complex or systemic bugs.</div></div><div class="cmd-item"><div class="cmd-name">/co:fix-logs</div><div class="cmd-desc">Use log analysis to identify and fix runtime failures.</div></div><div class="cmd-item"><div class="cmd-name">/co:fix-types</div><div class="cmd-desc">Resolve type-system errors until project returns clean typecheck.</div></div><div class="cmd-item"><div class="cmd-name">/co:fix-ui</div><div class="cmd-desc">Diagnose and fix visual/layout/interaction issues from evidence.</div></div><div class="cmd-item"><div class="cmd-name">/co:fix</div><div class="cmd-desc">General bug-fix command selecting fast or deep mode based on complexity.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Review</h3><div class="cmd-item"><div class="cmd-name">/co:review-a11y</div><div class="cmd-desc">Accessibility audit for WCAG conformance.</div></div><div class="cmd-item"><div class="cmd-name">/co:review-codebase-parallel</div><div class="cmd-desc">Parallel review tracks for faster full-codebase audits.</div></div><div class="cmd-item"><div class="cmd-name">/co:review-codebase</div><div class="cmd-desc">Comprehensive audit of quality, security, and performance.</div></div><div class="cmd-item"><div class="cmd-name">/co:review-perf</div><div class="cmd-desc">Performance-focused audit for frontend/backend bottlenecks.</div></div><div class="cmd-item"><div class="cmd-name">/co:review-security</div><div class="cmd-desc">Security-focused audit with OWASP lens.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Test</h3><div class="cmd-item"><div class="cmd-name">/co:test-gen</div><div class="cmd-desc">Generate tests for a specific file/module.</div></div><div class="cmd-item"><div class="cmd-name">/co:test-ui</div><div class="cmd-desc">Run browser-level E2E checks and report UI regressions.</div></div><div class="cmd-item"><div class="cmd-name">/co:test</div><div class="cmd-desc">Run project tests and evaluate quality gates.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Git</h3><div class="cmd-item"><div class="cmd-name">/co:changelog</div><div class="cmd-desc">Generate changelog entries from commit history and release context.</div></div><div class="cmd-item"><div class="cmd-name">/co:git-cm</div><div class="cmd-desc">Create safe conventional commit from current diff.</div></div><div class="cmd-item"><div class="cmd-name">/co:git-cp</div><div class="cmd-desc">Commit then push with pre-push safety checks.</div></div><div class="cmd-item"><div class="cmd-name">/co:git-pr</div><div class="cmd-desc">Prepare PR metadata and create PR via gh when available.</div></div><div class="cmd-item"><div class="cmd-name">/co:pr</div><div class="cmd-desc">Prepare complete PR content from current diff.</div></div><div class="cmd-item"><div class="cmd-name">/co:release</div><div class="cmd-desc">Prepare release tag, notes, and publish checklist.</div></div><div class="cmd-item"><div class="cmd-name">/co:worktree</div><div class="cmd-desc">Create/list/remove git worktrees for parallel tasks.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Deploy</h3><div class="cmd-item"><div class="cmd-name">/co:ci</div><div class="cmd-desc">Create or repair CI workflow for build, test, and quality checks.</div></div><div class="cmd-item"><div class="cmd-name">/co:deploy</div><div class="cmd-desc">Run deployment workflow and validate post-deploy health.</div></div><div class="cmd-item"><div class="cmd-name">/co:docker</div><div class="cmd-desc">Containerize the app with production-safe defaults.</div></div><div class="cmd-item"><div class="cmd-name">/co:k8s</div><div class="cmd-desc">Generate Kubernetes manifests and deployment guidance.</div></div><div class="cmd-item"><div class="cmd-name">/co:terraform</div><div class="cmd-desc">Generate or update Terraform infrastructure code.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Docs</h3><div class="cmd-item"><div class="cmd-name">/co:docs-api</div><div class="cmd-desc">Generate API reference docs from routes/controllers/schema.</div></div><div class="cmd-item"><div class="cmd-name">/co:docs-init</div><div class="cmd-desc">Generate baseline documentation set from codebase analysis.</div></div><div class="cmd-item"><div class="cmd-name">/co:docs-readme</div><div class="cmd-desc">Create or update README for accurate setup and usage.</div></div><div class="cmd-item"><div class="cmd-name">/co:docs-summarize</div><div class="cmd-desc">Produce concise codebase summary for context refresh.</div></div><div class="cmd-item"><div class="cmd-name">/co:docs-update</div><div class="cmd-desc">Synchronize documentation with recent code changes.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Optimize</h3><div class="cmd-item"><div class="cmd-name">/co:debug</div><div class="cmd-desc">Root-cause diagnosis only; no code modifications by default.</div></div><div class="cmd-item"><div class="cmd-name">/co:lint-fix</div><div class="cmd-desc">Run formatter/linter auto-fixes and report residual issues.</div></div><div class="cmd-item"><div class="cmd-name">/co:mock</div><div class="cmd-desc">Generate mocks, stubs, and fixtures for tests/dev.</div></div><div class="cmd-item"><div class="cmd-name">/co:optimize</div><div class="cmd-desc">Profile and optimize performance bottlenecks.</div></div><div class="cmd-item"><div class="cmd-name">/co:refactor</div><div class="cmd-desc">Restructure code without changing behavior.</div></div><div class="cmd-item"><div class="cmd-name">/co:seed</div><div class="cmd-desc">Generate realistic seed data for local/dev testing.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Skills & AI</h3><div class="cmd-item"><div class="cmd-name">/co:load</div><div class="cmd-desc">Activate a named skill for current session context.</div></div><div class="cmd-item"><div class="cmd-name">/co:skill-create</div><div class="cmd-desc">Create a new reusable skill markdown with examples and validation.</div></div><div class="cmd-item"><div class="cmd-name">/co:skill-fix-logs</div><div class="cmd-desc">Repair skill failures discovered in logs.txt.</div></div><div class="cmd-item"><div class="cmd-name">/co:use-mcp</div><div class="cmd-desc">Discover and execute available MCP tools for the requested task.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Monitor</h3><div class="cmd-item"><div class="cmd-name">/co:checkpoint</div><div class="cmd-desc">Save session state and concise continuation notes.</div></div><div class="cmd-item"><div class="cmd-name">/co:env-check</div><div class="cmd-desc">Audit environment variables for missing/unused/insecure values.</div></div><div class="cmd-item"><div class="cmd-name">/co:index</div><div class="cmd-desc">Create a searchable codebase index for faster navigation.</div></div><div class="cmd-item"><div class="cmd-name">/co:monitor</div><div class="cmd-desc">Set up monitoring and alerting recommendations.</div></div><div class="cmd-item"><div class="cmd-name">/co:preview</div><div class="cmd-desc">Start local preview and provide access instructions.</div></div><div class="cmd-item"><div class="cmd-name">/co:watzup</div><div class="cmd-desc">Quick status snapshot of plans, blockers, and momentum.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Design</h3><div class="cmd-item"><div class="cmd-name">/co:design-3d</div><div class="cmd-desc">Build Three.js/WebGL experiences with interaction and performance considerations.</div></div><div class="cmd-item"><div class="cmd-name">/co:design-describe</div><div class="cmd-desc">Provide visual analysis/specification without code generation.</div></div><div class="cmd-item"><div class="cmd-name">/co:design-fast</div><div class="cmd-desc">Deliver a functional UI prototype quickly.</div></div><div class="cmd-item"><div class="cmd-name">/co:design-good</div><div class="cmd-desc">Deliver production-grade polished UX with accessibility and performance.</div></div><div class="cmd-item"><div class="cmd-name">/co:design-screenshot</div><div class="cmd-desc">Translate screenshot references into implementable UI code/spec.</div></div><div class="cmd-item"><div class="cmd-name">/co:design-video</div><div class="cmd-desc">Infer interaction/motion from video and implement matching UI transitions.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Write</h3><div class="cmd-item"><div class="cmd-name">/co:slide-create</div><div class="cmd-desc">Create slide deck structure with speaker notes.</div></div><div class="cmd-item"><div class="cmd-name">/co:video-script</div><div class="cmd-desc">Generate structured video script with hook, body, and CTA.</div></div><div class="cmd-item"><div class="cmd-name">/co:write-blog</div><div class="cmd-desc">Create SEO-aware blog post with strong structure.</div></div><div class="cmd-item"><div class="cmd-name">/co:write-copy</div><div class="cmd-desc">Generate conversion-oriented marketing copy options.</div></div><div class="cmd-item"><div class="cmd-name">/co:write-email</div><div class="cmd-desc">Generate campaign email drafts and subject lines.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">SEO & Content</h3><div class="cmd-item"><div class="cmd-name">/co:content-cro</div><div class="cmd-desc">Audit and optimize conversion-focused copy.</div></div><div class="cmd-item"><div class="cmd-name">/co:content-enhance</div><div class="cmd-desc">Improve existing copy quality across clarity, SEO, readability, and impact.</div></div><div class="cmd-item"><div class="cmd-name">/co:content-fast</div><div class="cmd-desc">Generate rapid copy variants for specific channel constraints.</div></div><div class="cmd-item"><div class="cmd-name">/co:content-good</div><div class="cmd-desc">Produce strategic, research-backed copy options.</div></div><div class="cmd-item"><div class="cmd-name">/co:seo-audit</div><div class="cmd-desc">Run technical and content SEO audit.</div></div><div class="cmd-item"><div class="cmd-name">/co:seo-keywords</div><div class="cmd-desc">Research and cluster keywords for target topic.</div></div></div><div class="cmd-group"><h3 class="cmd-group-title">Other</h3><div class="cmd-item"><div class="cmd-name">/co:brainstorm</div><div class="cmd-desc">Generate alternative implementation ideas and tradeoff analysis.</div></div><div class="cmd-item"><div class="cmd-name">/co:campaign</div><div class="cmd-desc">Create a full marketing campaign plan across channels.</div></div><div class="cmd-item"><div class="cmd-name">/co:ck-help</div><div class="cmd-desc">List commands by category and explain typical use cases.</div></div><div class="cmd-item"><div class="cmd-name">/co:coding-level</div><div class="cmd-desc">Set response depth/style for future coding interactions.</div></div><div class="cmd-item"><div class="cmd-name">/co:integrate-polar</div><div class="cmd-desc">Implement Polar billing end-to-end with secure webhook handling.</div></div><div class="cmd-item"><div class="cmd-name">/co:integrate-sepay</div><div class="cmd-desc">Implement SePay payment flows with localization and webhook security.</div></div><div class="cmd-item"><div class="cmd-name">/co:journal</div><div class="cmd-desc">Create a timestamped engineering session log.</div></div><div class="cmd-item"><div class="cmd-name">/co:kanban</div><div class="cmd-desc">Update or report task board state.</div></div><div class="cmd-item"><div class="cmd-name">/co:scout</div><div class="cmd-desc">Parallel codebase reconnaissance to locate implementation targets quickly.</div></div><div class="cmd-item"><div class="cmd-name">/co:secure</div><div class="cmd-desc">Apply remediation for previously identified security findings.</div></div></div>
+                        </div>
+                    </section>
+
+                    <hr class="docs-divider">
+
+                    <section id="workflows">
+                        <h2 class="docs-h2">Example Workflows</h2>
+                        <p class="docs-desc">See how ClaudeInOne commands compound to build full features.</p>
+                        <div class="workflow-grid">
+                            <div class="workflow-card">
+                                <h3 class="wf-title">New Feature</h3>
+                                <div class="wf-steps">
+                                    <div class="wf-step"><strong>1.</strong> <code>/co:plan add user auth</code><br><span class="wf-desc">Creates a detailed implementation plan.</span></div>
+                                    <div class="wf-step"><strong>2.</strong> <code>/co:cook add user auth</code><br><span class="wf-desc">Implements end-to-end using relevant skills.</span></div>
+                                    <div class="wf-step"><strong>3.</strong> <code>/co:test-gen</code><br><span class="wf-desc">Generates tests for the new code.</span></div>
+                                </div>
                             </div>
-                            <div class="cat-list">
-                                <div class="skill-item">backend-fastify</div>
-                                <div class="skill-item">backend-nestjs</div>
-                                <div class="skill-item">backend-trpc</div>
-                                <div class="skill-item">backend-graphql</div>
+                            <div class="workflow-card">
+                                <h3 class="wf-title">Production Debug</h3>
+                                <div class="wf-steps">
+                                    <div class="wf-step"><strong>1.</strong> <code>/co:fix-hard [issue]</code><br><span class="wf-desc">Deep root cause analysis.</span></div>
+                                    <div class="wf-step"><strong>2.</strong> <code>/co:review-security</code><br><span class="wf-desc">Checks the fix didn't introduce vulnerabilities.</span></div>
+                                    <div class="wf-step"><strong>3.</strong> <code>/co:git-cm</code><br><span class="wf-desc">Generates a conventional commit message.</span></div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="skills-category">
-                            <div class="cat-header">
-                                <h3>Databases</h3>
-                                <span class="cat-count">12</span>
-                            </div>
-                            <div class="cat-list">
-                                <div class="skill-item">db-postgres</div>
-                                <div class="skill-item">db-redis</div>
-                                <div class="skill-item">db-mongodb</div>
-                                <div class="skill-item">db-turso</div>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <div class="cat-header">
-                                <h3>Frontend & UI</h3>
-                                <span class="cat-count">23</span>
-                            </div>
-                            <div class="cat-list">
-                                <div class="skill-item">frontend-react</div>
-                                <div class="skill-item">frontend-nextjs</div>
-                                <div class="skill-item">ui-tailwind</div>
-                                <div class="skill-item">ui-framer-motion</div>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <div class="cat-header">
-                                <h3>DevOps</h3>
-                                <span class="cat-count">16</span>
-                            </div>
-                            <div class="cat-list">
-                                <div class="skill-item">devops-docker</div>
-                                <div class="skill-item">devops-awscdk</div>
-                                <div class="skill-item">devops-terraform</div>
-                                <div class="skill-item">devops-githubactions</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="docs-divider">
-
-                <section id="commands">
-                    <h2 class="docs-h2">Commands Reference</h2>
-                    <p class="docs-desc">All ClaudeInOne commands are namespaced under <code>/co:</code> to distinguish
-                        them from Claude Code built-ins like <code>/help</code>, <code>/clear</code>, and
-                        <code>/init</code>.</p>
-
-                    <div class="commands-list">
-                        <div class="cmd-item">
-                            <div class="cmd-name">/co:bootstrap</div>
-                            <div class="cmd-desc">5-phase autonomous creation: Requirements → Research → Plan →
-                                Auto-generate → Validate.</div>
-                        </div>
-                        <div class="cmd-item">
-                            <div class="cmd-name">/co:cook [feature]</div>
-                            <div class="cmd-desc">7-step pipeline: Planning → Scout → Implementation → Testing → Code
-                                Review → Docs → Summary.</div>
-                        </div>
-                        <div class="cmd-item">
-                            <div class="cmd-name">/co:fix-hard [issue]</div>
-                            <div class="cmd-desc">Multi-agent debug pipeline. Scout → Debugger → Researcher → Planner →
-                                Implementation → Tester.</div>
-                        </div>
-                        <div class="cmd-item">
-                            <div class="cmd-name">/co:plan-parallel</div>
-                            <div class="cmd-desc">Parallel researchers and implementation planners running
-                                asynchronously to map larger complex refactors.</div>
-                        </div>
-                    </div>
-                </section>
-
-                <hr class="docs-divider">
-
-                <section id="workflows">
-                    <h2 class="docs-h2">Example Workflows</h2>
-                    <p class="docs-desc">See how ClaudeInOne commands compound to build full features.</p>
-
-                    <div class="workflow-grid">
-                        <div class="workflow-card">
-                            <h3 class="wf-title">Bootstrapping</h3>
-                            <div class="wf-steps">
-                                <div class="wf-step"><strong>1.</strong> <code>/co:plan-architecture</code> <br><span
-                                        class="wf-desc">Designs the frontend/backend divide.</span></div>
-                                <div class="wf-step"><strong>2.</strong> <code>/co:bootstrap-auth</code> <br><span
-                                        class="wf-desc">Sets up NextAuth with proper session handles.</span></div>
-                                <div class="wf-step"><strong>3.</strong> <code>/co:bootstrap-db</code> <br><span
-                                        class="wf-desc">Initializes Prisma and Turso config.</span></div>
-                            </div>
-                        </div>
-
-                        <div class="workflow-card">
-                            <h3 class="wf-title">Production Debugging</h3>
-                            <div class="wf-steps">
-                                <div class="wf-step"><strong>1.</strong> <code>/co:fix-hard [issue]</code> <br><span
-                                        class="wf-desc">Runs root cause analysis.</span></div>
-                                <div class="wf-step"><strong>2.</strong> <code>/co:review-security</code> <br><span
-                                        class="wf-desc">Ensures the fix didn't introduce vulnerabilities.</span></div>
-                                <div class="wf-step"><strong>3.</strong> <code>/co:write-tests</code> <br><span
-                                        class="wf-desc">Autogenerates regression tests.</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </main>
+                    </section>
+                </main>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-
 </html>

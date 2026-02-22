@@ -4,20 +4,20 @@ A comprehensive development framework with 211+ production-ready skills, master 
 
 ## What's Included
 
-### 📚 Skills Library (211 files)
+###  Skills Library (211 files)
 - Complete coverage of modern frameworks
 - Real, production-ready code examples
 - Best practices for each technology
 - Security & performance guidelines
 
-### 📖 Master System Prompt (CLAUDE.md)
+###  Master System Prompt (CLAUDE.md)
 - Complete developer guidelines
 - Code quality standards
 - Session workflow
 - Security & performance rules
 - Tool recommendations
 
-### ⚙️ Configuration Files
+###  Configuration Files
 - `.ck.json` - Version and metadata
 - `settings.json` - Hooks and permissions
 - `.ckignore` - Exclusion patterns
@@ -107,13 +107,13 @@ claudekit/
 
 ## Key Features
 
-✅ **211 Production-Ready Skills** - Comprehensive technology coverage
-✅ **Real Code Examples** - Not templates, actual implementations
-✅ **Security First** - OWASP compliance throughout
-✅ **Performance Optimized** - Caching, database, bundle strategies
-✅ **Best Practices** - Industry-standard patterns
-✅ **Well-Organized** - Easy to find and reference
-✅ **Tested Patterns** - Proven implementations
+- **211 Production-Ready Skills** - Comprehensive technology coverage
+- **Real Code Examples** - Not templates, actual implementations
+- **Security First** - OWASP compliance throughout
+- **Performance Optimized** - Caching, database, bundle strategies
+- **Best Practices** - Industry-standard patterns
+- **Well-Organized** - Easy to find and reference
+- **Tested Patterns** - Proven implementations
 
 ## Session Workflow
 

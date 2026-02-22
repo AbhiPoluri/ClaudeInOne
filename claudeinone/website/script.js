@@ -18,16 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
         { type: 'delay', ms: 600 },
         { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:05]</span> Initializing claudeinone environment..." },
         { type: 'delay', ms: 300 },
-        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:06]</span> Loading <span class='blue'>53</span> core commands..." },
+        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:06]</span> Loading <span class='blue'>95</span> /co: commands..." },
         { type: 'delay', ms: 200 },
-        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:06]</span> Activating <span class='purple'>34</span> specialized agents..." },
+        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:06]</span> Activating <span class='purple'>37</span> specialist agents..." },
         { type: 'delay', ms: 400 },
-        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:07]</span> Injecting <span class='orange'>108</span> engineering skills..." },
+        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:07]</span> Injecting <span class='orange'>213</span> production skills..." },
         { type: 'delay', ms: 600 },
-        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:07]</span> <span class='green'>Success! Your workspace is supercharged.</span>" },
+        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:07]</span> <span class='green'>ClaudeInOne installed. Your Claude just got smarter.</span>" },
         { type: 'text', content: "" },
         { type: 'delay', ms: 300 },
-        { type: 'text', content: "Type <span class='blue'>help</span> to see available commands or <span class='purple'>docs</span> for documentation." },
+        { type: 'text', content: "Type <span class='blue'>help</span> to learn more, <span class='blue'>docs</span> for the full reference." },
         { type: 'text', content: "" },
         { type: 'stop' }
     ];
@@ -79,7 +79,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    processSequence();
+    if (output && input && terminalBody && typingCursor) {
+        processSequence();
+    }
 
     function printLine(html) {
         const line = document.createElement('div');
@@ -103,45 +105,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         switch (command) {
             case 'help':
-                printLine("Available commands:");
-                printLine("  <span class='blue'>co doctor</span>     - Check system health and installation");
-                printLine("  <span class='orange'>co init</span>       - Initialize claudeinone framework");
-                printLine("  <span class='purple'>docs</span>          - Open the complete skills, agents, and commands library");
-                printLine("  <span class='green'>clear</span>         - Clear the terminal output");
-                printLine("  <span class='dim'>help</span>          - Show this help message");
-                break;
-            case 'co':
-                if (args[1] === 'doctor') {
-                    printLine("<span class='dim'>[Running system checks...]</span>");
-                    setTimeout(() => {
-                        printLine("Checking Claude Code installation... <span class='green'>OK</span>");
-                        printLine("Verifying workspace architecture... <span class='green'>OK</span>");
-                        printLine("Validating skills configuration... <span class='green'>OK</span>");
-                        printLine("<br>Doctor check passed.");
-                    }, 400);
-                } else if (args[1] === 'init') {
-                    printLine("<span class='dim'>[Initializing environment...]</span>");
-                    setTimeout(() => {
-                        printLine("Loading <span class='blue'>53</span> core commands...");
-                        printLine("Activating <span class='purple'>34</span> specialized agents...");
-                        printLine("Injecting <span class='orange'>108</span> engineering skills...");
-                        printLine("<span class='green'>Success! Your workspace is supercharged.</span>");
-                    }, 500);
-                } else if (args[1]) {
-                    printLine(`co: unknown command '${args[1]}'`);
-                    printLine("Run 'help' for usage.");
-                } else {
-                    printLine("Usage: co &lt;command&gt; [options]");
-                    printLine("Commands:");
-                    printLine("  init    Detect .claude/ → diff → merge/overwrite per-file");
-                    printLine("  doctor  Check Claude Code installed, structure, configs.");
-                }
+                printLine("");
+                printLine("<span class='white'>claudeinone</span> is a production-grade framework for Claude Code.");
+                printLine("It installs <span class='orange'>213 skills</span>, <span class='purple'>37 agents</span>, and <span class='blue'>95 /co: commands</span> into any project,");
+                printLine("giving Claude expert-level knowledge across every major framework, pattern,");
+                printLine("and deployment strategy — without you having to explain anything.");
+                printLine("");
+                printLine("Install it once with <span class='green'>npm install -g claudeinone-cli</span>, then run");
+                printLine("<span class='green'>co init</span> inside any project. Claude Code picks it up automatically.");
+                printLine("");
+                printLine("  <span class='blue'>docs</span>      Open the full skills, agents, and commands reference");
+                printLine("  <span class='blue'>github</span>    Open the GitHub repository");
+                printLine("  <span class='blue'>clear</span>     Clear the terminal");
+                printLine("");
                 break;
             case 'docs':
                 printLine("<span class='dim'>Opening documentation...</span>");
-                setTimeout(() => {
-                    window.location.href = "docs.html";
-                }, 400);
+                setTimeout(() => { window.location.href = "docs.html"; }, 400);
+                break;
+            case 'github':
+                printLine("<span class='dim'>Opening GitHub...</span>");
+                setTimeout(() => { window.open("https://github.com/AbhiPoluri/ClaudeInOne", "_blank"); }, 400);
                 break;
             case 'clear':
                 output.innerHTML = '';
@@ -149,17 +133,48 @@ document.addEventListener("DOMContentLoaded", () => {
             case '':
                 break;
             default:
-                printLine(`command not found: ${command}`);
+                printLine(`command not found: <span class='orange'>${command}</span>. Type <span class='blue'>help</span> for available commands.`);
                 break;
         }
     }
 
-    input.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            const cmd = input.value;
-            input.value = "";
-            executeCommand(cmd);
-        }
-    });
+    if (input) {
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                const cmd = input.value;
+                input.value = "";
+                executeCommand(cmd);
+            }
+        });
+    }
+
+    // Theme Toggle Logic
+    const themeCheckbox = document.querySelector(".theme-checkbox");
+
+    // Check local storage or system preference
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const storedTheme = localStorage.getItem("theme");
+    const isDark = storedTheme === "dark" || (!storedTheme && prefersDark);
+
+    // Set initial theme
+    if (isDark) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        if (themeCheckbox) themeCheckbox.checked = true;
+    } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        if (themeCheckbox) themeCheckbox.checked = false;
+    }
+
+    if (themeCheckbox) {
+        themeCheckbox.addEventListener("change", (e) => {
+            if (e.target.checked) {
+                document.documentElement.setAttribute("data-theme", "dark");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+                localStorage.setItem("theme", "light");
+            }
+        });
+    }
 });
