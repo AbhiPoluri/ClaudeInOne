@@ -1,6 +1,6 @@
 {
   "name": "claudeinone-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Production-grade Claude Code framework — 213 skills, 37 agents, 95 /co: commands",
   "type": "module",
   "bin": {
