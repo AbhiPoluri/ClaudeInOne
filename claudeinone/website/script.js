@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { type: 'delay', ms: 300 },
         { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:06]</span> Loading <span class='blue'>95</span> /co: commands..." },
         { type: 'delay', ms: 200 },
-        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:06]</span> Activating <span class='purple'>37</span> specialist agents..." },
+        { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:06]</span> Activating <span class='orange'>37</span> specialist agents..." },
         { type: 'delay', ms: 400 },
         { type: 'text', content: "<span class='dim'>[2026-02-21 22:48:07]</span> Injecting <span class='orange'>213</span> production skills..." },
         { type: 'delay', ms: 600 },
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
             case 'help':
                 printLine("");
                 printLine("<span class='white'>claudeinone</span> is a production-grade framework for Claude Code.");
-                printLine("It installs <span class='orange'>213 skills</span>, <span class='purple'>37 agents</span>, and <span class='blue'>95 /co: commands</span> into any project,");
+                printLine("It installs <span class='orange'>213 skills</span>, <span class='orange'>37 agents</span>, and <span class='blue'>95 /co: commands</span> into any project,");
                 printLine("giving Claude expert-level knowledge across every major framework, pattern,");
                 printLine("and deployment strategy — without you having to explain anything.");
                 printLine("");
