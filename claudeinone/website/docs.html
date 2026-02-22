@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation and Capabilities of the claudeinone framework.">
+    <title>Docs | claudeinone</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="docs-body">
+    <div class="docs-container">
+
+        <!-- Header Nav -->
+        <header class="docs-nav">
+            <div class="docs-nav-left">
+                <div class="docs-nav-logo">
+                    <div class="docs-nav-mark">C</div>
+                    <div class="docs-nav-brand">ClaudeInOne</div>
+                </div>
+                <div class="docs-nav-slash">/</div>
+                <div class="docs-nav-section">Docs</div>
+            </div>
+
+            <div class="docs-nav-right">
+                <nav class="docs-nav-links">
+                    <a href="#skills">Skills</a>
+                    <a href="#commands">Commands</a>
+                    <a href="https://github.com/AbhiPoluri/claudeinone" target="_blank">GitHub ↗</a>
+                </nav>
+                <div class="docs-nav-btn">co init</div>
+            </div>
+        </header>
+
+        <div class="docs-main-area">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <a href="index.html" class="back-link">&larr; Back to Terminal</a>
+
+                <div class="sb-section">
+                    <div class="sb-title">GETTING STARTED</div>
+                    <ul class="sb-links">
+                        <li><a href="#introduction" class="active">Introduction</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#first-command">Your First Command</a></li>
+                        <li><a href="#file-tree">What Gets Installed</a></li>
+                    </ul>
+                </div>
+
+                <div class="sb-section">
+                    <div class="sb-title">CAPABILITIES</div>
+                    <ul class="sb-links">
+                        <li><a href="#skills">Skills Library (213)</a></li>
+                        <li><a href="#agents">Specialist Agents (37)</a></li>
+                        <li><a href="#commands">Slash Commands (95)</a></li>
+                    </ul>
+                </div>
+
+                <div class="sb-section">
+                    <div class="sb-title">USE CASES</div>
+                    <ul class="sb-links">
+                        <li><a href="#workflows">Example Workflows</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="docs-content">
+                <div class="docs-breadcrumb">Docs / Getting Started / Introduction</div>
+
+                <section id="introduction">
+                    <h1 class="docs-h1">Introduction</h1>
+                    <p class="docs-lead">ClaudeInOne is a production-grade framework for Claude Code. It installs 213
+                        real skill guides, 37 specialist agents, and 95 namespaced <code>/co:</code> commands into any
+                        project — giving Claude expert-level knowledge across every major framework, pattern, and
+                        deployment strategy.</p>
+
+                    <div class="docs-callout warning">
+                        <span class="callout-icon">ℹ</span>
+                        <p>Claude Code built-ins (<code>/help</code>, <code>/clear</code>, <code>/init</code>,
+                            <code>/memory</code>...) are unchanged. <code>/co:</code> prefix = ClaudeInOne.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="installation">
+                    <h2 class="docs-h2">Installation</h2>
+                    <p class="docs-desc">Install the CLI globally via npm, then run <code>co init</code> inside any
+                        project:</p>
+
+                    <div class="docs-code-block">
+                        <pre><code>npm install -g claudeinone
+cd your-project
+co init</code></pre>
+                    </div>
+                </section>
+
+                <section id="first-command">
+                    <h2 class="docs-h2">Your First Command</h2>
+                    <p class="docs-desc">Open Claude Code in your project, then try any <code>/co:</code> command.
+                        Claude will read the matching skill and apply production patterns automatically:</p>
+
+                    <div class="docs-code-block terminal-style">
+                        <pre><code>~ % claude
+Welcome to Claude Code!
+
+> /co:bootstrap-react
+[Claude reading skill: frontend-react]
+I can help bootstrap a production React app. I will set up Vite, Tailwind v4, and Lucide icons...</code></pre>
+                    </div>
+                </section>
+
+                <section id="file-tree">
+                    <h2 class="docs-h2">What Gets Installed</h2>
+                    <p class="docs-desc">ClaudeInOne creates a <code>.claude</code> directory in your project root with
+                        specialized agent files and markdown skill guides.</p>
+                    <div class="docs-code-block tree-style">
+                        <pre><code>project-root/
+└── .claude/
+    ├── .ck.json                # Project config
+    ├── agents/                 # System prompts
+    │   ├── ui-ux-designer.md
+    │   └── senior-backend.md
+    ├── commands/               # Slash commands
+    │   ├── plan/
+    │   ├── build/
+    │   └── fix/
+    └── skills/                 # Knowledge base
+        ├── frontend-react.md
+        └── database-postgres.md</code></pre>
+                    </div>
+                </section>
+
+                <hr class="docs-divider">
+
+                <section id="skills">
+                    <h2 class="docs-h2">Skills Library</h2>
+                    <p class="docs-desc">213 production-ready skill guides covering every major framework, pattern, and
+                        technology. Each skill contains real TypeScript implementations, not summaries.</p>
+
+                    <div class="skills-grid">
+                        <div class="skills-category">
+                            <div class="cat-header">
+                                <h3>Backend</h3>
+                                <span class="cat-count">21</span>
+                            </div>
+                            <div class="cat-list">
+                                <div class="skill-item">backend-fastify</div>
+                                <div class="skill-item">backend-nestjs</div>
+                                <div class="skill-item">backend-trpc</div>
+                                <div class="skill-item">backend-graphql</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <div class="cat-header">
+                                <h3>Databases</h3>
+                                <span class="cat-count">12</span>
+                            </div>
+                            <div class="cat-list">
+                                <div class="skill-item">db-postgres</div>
+                                <div class="skill-item">db-redis</div>
+                                <div class="skill-item">db-mongodb</div>
+                                <div class="skill-item">db-turso</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <div class="cat-header">
+                                <h3>Frontend & UI</h3>
+                                <span class="cat-count">23</span>
+                            </div>
+                            <div class="cat-list">
+                                <div class="skill-item">frontend-react</div>
+                                <div class="skill-item">frontend-nextjs</div>
+                                <div class="skill-item">ui-tailwind</div>
+                                <div class="skill-item">ui-framer-motion</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <div class="cat-header">
+                                <h3>DevOps</h3>
+                                <span class="cat-count">16</span>
+                            </div>
+                            <div class="cat-list">
+                                <div class="skill-item">devops-docker</div>
+                                <div class="skill-item">devops-awscdk</div>
+                                <div class="skill-item">devops-terraform</div>
+                                <div class="skill-item">devops-githubactions</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="docs-divider">
+
+                <section id="commands">
+                    <h2 class="docs-h2">Commands Reference</h2>
+                    <p class="docs-desc">All ClaudeInOne commands are namespaced under <code>/co:</code> to distinguish
+                        them from Claude Code built-ins like <code>/help</code>, <code>/clear</code>, and
+                        <code>/init</code>.</p>
+
+                    <div class="commands-list">
+                        <div class="cmd-item">
+                            <div class="cmd-name">/co:bootstrap</div>
+                            <div class="cmd-desc">5-phase autonomous creation: Requirements → Research → Plan →
+                                Auto-generate → Validate.</div>
+                        </div>
+                        <div class="cmd-item">
+                            <div class="cmd-name">/co:cook [feature]</div>
+                            <div class="cmd-desc">7-step pipeline: Planning → Scout → Implementation → Testing → Code
+                                Review → Docs → Summary.</div>
+                        </div>
+                        <div class="cmd-item">
+                            <div class="cmd-name">/co:fix-hard [issue]</div>
+                            <div class="cmd-desc">Multi-agent debug pipeline. Scout → Debugger → Researcher → Planner →
+                                Implementation → Tester.</div>
+                        </div>
+                        <div class="cmd-item">
+                            <div class="cmd-name">/co:plan-parallel</div>
+                            <div class="cmd-desc">Parallel researchers and implementation planners running
+                                asynchronously to map larger complex refactors.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="docs-divider">
+
+                <section id="workflows">
+                    <h2 class="docs-h2">Example Workflows</h2>
+                    <p class="docs-desc">See how ClaudeInOne commands compound to build full features.</p>
+
+                    <div class="workflow-grid">
+                        <div class="workflow-card">
+                            <h3 class="wf-title">Bootstrapping</h3>
+                            <div class="wf-steps">
+                                <div class="wf-step"><strong>1.</strong> <code>/co:plan-architecture</code> <br><span
+                                        class="wf-desc">Designs the frontend/backend divide.</span></div>
+                                <div class="wf-step"><strong>2.</strong> <code>/co:bootstrap-auth</code> <br><span
+                                        class="wf-desc">Sets up NextAuth with proper session handles.</span></div>
+                                <div class="wf-step"><strong>3.</strong> <code>/co:bootstrap-db</code> <br><span
+                                        class="wf-desc">Initializes Prisma and Turso config.</span></div>
+                            </div>
+                        </div>
+
+                        <div class="workflow-card">
+                            <h3 class="wf-title">Production Debugging</h3>
+                            <div class="wf-steps">
+                                <div class="wf-step"><strong>1.</strong> <code>/co:fix-hard [issue]</code> <br><span
+                                        class="wf-desc">Runs root cause analysis.</span></div>
+                                <div class="wf-step"><strong>2.</strong> <code>/co:review-security</code> <br><span
+                                        class="wf-desc">Ensures the fix didn't introduce vulnerabilities.</span></div>
+                                <div class="wf-step"><strong>3.</strong> <code>/co:write-tests</code> <br><span
+                                        class="wf-desc">Autogenerates regression tests.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
