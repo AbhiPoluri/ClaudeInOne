@@ -12,3 +12,4 @@ scripts/
 # Misc
 .DS_Store
 *.log
+.pack-state.json

@@ -1,6 +1,6 @@
 {
   "name": "claudeinone-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Production-grade Claude Code framework — 213 skills, 37 agents, 95 /co: commands",
   "type": "module",
   "bin": {
@@ -9,6 +9,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "smoke": "bash ./scripts/smoke.sh",
+    "prepack": "node ./scripts/materialize-kit.mjs",
+    "postpack": "node ./scripts/restore-kit-link.mjs",
     "dev": "bun run src/index.ts",
     "start": "node dist/index.js"
   },
