@@ -305,6 +305,7 @@ body.docs-body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .docs-terminal {
@@ -739,4 +740,139 @@ body.docs-body {
   color: var(--text-muted);
   font-size: 14px;
   line-height: 1.5;
+}
+
+/* Responsive Docs Layout */
+@media (max-width: 1100px) {
+  .docs-nav {
+    padding: 0 20px;
+  }
+
+  .docs-nav-right {
+    gap: 14px;
+  }
+
+  .docs-nav-links {
+    gap: 12px;
+  }
+
+  .docs-sidebar {
+    display: none;
+  }
+
+  .docs-content {
+    max-width: none;
+    width: 100%;
+    min-width: 0;
+    padding: 32px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.docs-body {
+    overflow: auto;
+  }
+
+  .docs-terminal {
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .terminal-header {
+    padding: 10px 12px;
+  }
+
+  .terminal-title {
+    margin-right: 0;
+    font-size: 12px;
+  }
+
+  .docs-nav {
+    height: auto;
+    min-height: 64px;
+    padding: 10px 14px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .docs-nav-left {
+    width: 100%;
+  }
+
+  .docs-nav-right {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .docs-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .docs-nav-btn {
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .docs-content {
+    padding: 22px 16px;
+  }
+
+  .docs-breadcrumb {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+
+  .docs-h1 {
+    font-size: 26px;
+  }
+
+  .docs-h2 {
+    font-size: 18px;
+    margin: 36px 0 12px 0;
+  }
+
+  .docs-lead {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .docs-code-block {
+    padding: 14px;
+  }
+
+  .docs-code-block code {
+    font-size: 12px;
+  }
+
+  .workflow-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .workflow-card,
+  .skills-category,
+  .cmd-item {
+    padding: 16px;
+  }
+
+  .wf-step,
+  .skill-item,
+  .cmd-desc {
+    font-size: 12px;
+  }
+
+  .cmd-name {
+    font-size: 13px;
+  }
 }
