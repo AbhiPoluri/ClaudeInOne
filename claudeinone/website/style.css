@@ -119,6 +119,126 @@ body {
   user-select: none;
 }
 
+/* OS-adaptive terminal chrome */
+:root[data-os="windows"] .mac-buttons {
+  order: 3;
+  margin-left: 12px;
+  gap: 0;
+}
+
+:root[data-os="windows"] .btn {
+  width: 42px;
+  height: 30px;
+  border-radius: 0;
+  background: transparent;
+  position: relative;
+}
+
+:root[data-os="windows"] .btn::before {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1;
+}
+
+:root[data-os="windows"] .btn.minimize::before {
+  content: "\2212";
+}
+
+:root[data-os="windows"] .btn.maximize::before {
+  content: "\25A1";
+  font-size: 10px;
+}
+
+:root[data-os="windows"] .btn.close::before {
+  content: "\00D7";
+  font-size: 15px;
+}
+
+:root[data-os="windows"] .btn.minimize {
+  order: 1;
+}
+
+:root[data-os="windows"] .btn.maximize {
+  order: 2;
+}
+
+:root[data-os="windows"] .btn.close {
+  order: 3;
+}
+
+:root[data-os="windows"] .btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:root[data-os="windows"] .btn.close:hover {
+  background: #d92d20;
+}
+
+:root[data-os="windows"] .btn.close:hover::before {
+  color: #fff;
+}
+
+:root[data-os="windows"] .terminal-title {
+  margin-right: 0;
+  text-align: left;
+  padding-left: 8px;
+}
+
+:root[data-os="windows"] .theme-wrapper {
+  margin-right: 8px;
+}
+
+:root[data-os="windows"] .btn.win-active {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+:root[data-os="windows"] .btn.close.win-active {
+  background: #d92d20;
+}
+
+:root[data-os="windows"] .btn.close.win-active::before {
+  color: #fff;
+}
+
+:root[data-os="windows"] .docs-window-header {
+  justify-content: flex-start;
+}
+
+:root[data-os="windows"] .docs-window-title {
+  order: 1;
+  flex: 0 1 auto;
+  min-width: 140px;
+}
+
+:root[data-os="windows"] .docs-window-actions {
+  order: 2;
+  margin-left: auto;
+}
+
+:root[data-os="windows"] .docs-window-mac {
+  order: 3;
+  margin-left: 12px;
+  margin-right: 0;
+  gap: 0;
+}
+
+:root[data-os="linux"] .btn.close {
+  background-color: #f59e0b;
+}
+
+:root[data-os="linux"] .btn.minimize {
+  background-color: #64748b;
+}
+
+:root[data-os="linux"] .btn.maximize {
+  background-color: #22c55e;
+}
+
 .terminal-body {
   padding: 24px;
   font-family: var(--font-mono);
@@ -280,20 +400,22 @@ body {
   margin-right: 6px;
 }
 
-.docs-window-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+.docs-window-btn {
   border: none;
   cursor: pointer;
 }
 
-.docs-dot-close {
-  background: var(--mac-red);
+/* Keep original mac-style popup controls: close + minimize only */
+:root:not([data-os="windows"]) .docs-window-mac .btn.close {
+  order: 1;
 }
 
-.docs-dot-minimize {
-  background: var(--mac-yellow);
+:root:not([data-os="windows"]) .docs-window-mac .btn.minimize {
+  order: 2;
+}
+
+:root:not([data-os="windows"]) .docs-window-mac .btn.maximize {
+  display: none;
 }
 
 .docs-window-title {

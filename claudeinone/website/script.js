@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
+    function detectOS() {
+        const uaDataPlatform = navigator.userAgentData?.platform?.toLowerCase?.() || "";
+        const platform = (navigator.platform || "").toLowerCase();
+        const ua = (navigator.userAgent || "").toLowerCase();
+        const source = `${uaDataPlatform} ${platform} ${ua}`;
+
+        if (source.includes("win")) return "windows";
+        if (source.includes("mac") || source.includes("darwin")) return "macos";
+        if (source.includes("linux") || source.includes("x11")) return "linux";
+        return "macos";
+    }
+
+    const currentOS = detectOS();
+    document.documentElement.setAttribute("data-os", currentOS);
+
+    function getPromptText() {
+        if (currentOS === "windows") return "C:\\>";
+        if (currentOS === "linux") return "$";
+        return "~ %";
+    }
+
+    function getPromptMarkup() {
+        return `<span class='prompt'>${getPromptText()}</span>`;
+    }
+
     const output = document.getElementById("output");
     const input = document.getElementById("cmd-input");
     const typingCursor = document.getElementById("typing-cursor");
@@ -38,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function typeInput(text, element, options = {}) {
         const minDelay = options.minDelay ?? 20;
         const maxDelay = options.maxDelay ?? 45;
-        element.innerHTML = "<span class='prompt'>~ %</span> <span class='command-input-simulated'></span>";
+        element.innerHTML = `${getPromptMarkup()} <span class='command-input-simulated'></span>`;
         const textSpan = element.querySelector('.command-input-simulated');
 
         element.appendChild(typingCursor);
@@ -60,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         await new Promise(r => setTimeout(r, 250));
 
         line.removeChild(typingCursor);
-        line.innerHTML = `<span class='prompt'>~ %</span> <span class='command-input'>${cmd}</span>`;
+        line.innerHTML = `${getPromptMarkup()} <span class='command-input'>${cmd}</span>`;
         executeCommand(cmd, { skipPrintCommand: true });
     }
 
@@ -85,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 await new Promise(r => setTimeout(r, 220));
 
                 line.removeChild(typingCursor);
-                line.innerHTML = `<span class='prompt'>~ %</span> <span class='command-input'>${step.content}</span>`;
+                line.innerHTML = `${getPromptMarkup()} <span class='command-input'>${step.content}</span>`;
             } else if (step.type === 'stop') {
                 const inputLine = document.querySelector('.input-line');
                 inputLine.insertBefore(typingCursor, input);
@@ -123,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function printCommand(cmd) {
         const line = document.createElement('div');
         line.className = 'input-line-past';
-        line.innerHTML = `<span class="prompt">~ %</span> <span class="command-input">${cmd}</span>`;
+        line.innerHTML = `${getPromptMarkup()} <span class="command-input">${cmd}</span>`;
         output.appendChild(line);
     }
 
@@ -179,6 +204,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (input) {
+        document.querySelectorAll(".prompt").forEach((el) => {
+            el.textContent = getPromptText();
+        });
+
         input.addEventListener("keydown", function (event) {
             if (event.key === "Enter") {
                 event.preventDefault();
@@ -186,6 +215,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 input.value = "";
                 executeCommand(cmd);
             }
+        });
+    }
+
+    if (currentOS === "windows") {
+        document.querySelectorAll(".mac-buttons").forEach((group) => {
+            group.addEventListener("click", (event) => {
+                const target = event.target.closest(".btn");
+                if (!target) return;
+                group.querySelectorAll(".btn").forEach((btn) => btn.classList.remove("win-active"));
+                target.classList.add("win-active");
+                if (group._winActiveTimer) {
+                    clearTimeout(group._winActiveTimer);
+                }
+                group._winActiveTimer = setTimeout(() => {
+                    group.querySelectorAll(".btn").forEach((btn) => btn.classList.remove("win-active"));
+                }, 380);
+            });
         });
     }
 
