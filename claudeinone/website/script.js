@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "gives you a stronger baseline for planning, implementation, testing, and shipping.",
                     "Install once and reuse it across projects for faster, more consistent output.",
                     "",
-                    "Install it once with <span class='green'>npm install -g claudeinone-cli</span>, then run",
+                    "Install it once with <span class='terminal-link green' data-cmd='install'>npm install -g claudeinone-cli</span>, then run",
                     "<span class='green'>co init</span> inside any project. Claude Code picks it up automatically.",
                     "",
                     "  <span class='terminal-link blue' data-cmd='docs'>docs</span>      Open the full skills, agents, and commands reference",
@@ -182,6 +182,21 @@ document.addEventListener("DOMContentLoaded", () => {
                     ""
                 ];
                 void printLinesSlow(helpLines, 175);
+                break;
+            }
+            case 'install': {
+                const installCmd = "npm install -g claudeinone-cli";
+                let copyOk = false;
+                try {
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(installCmd).then(() => {}).catch(() => {});
+                        copyOk = true;
+                    }
+                } catch (_) {}
+                printLine(copyOk
+                    ? `<span class='green'>Copied to clipboard:</span> ${installCmd}`
+                    : `<span class='green'>Run this:</span> ${installCmd}`
+                );
                 break;
             }
             case 'docs':

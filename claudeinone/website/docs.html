@@ -100,7 +100,8 @@
                     <section id="installation">
                         <h2 class="docs-h2">Installation</h2>
                         <p class="docs-desc">Install the CLI globally, then run <code>co init</code> inside any project:</p>
-                        <div class="docs-code-block">
+                        <div class="docs-code-block" style="position:relative;">
+                            <button class="copy-btn" onclick="(function(btn){var code='npm install -g claudeinone-cli\ncd your-project\nco init';navigator.clipboard&&navigator.clipboard.writeText(code).then(function(){btn.textContent='Copied!';setTimeout(function(){btn.textContent='Copy';},1500);});})(this)" aria-label="Copy install command">Copy</button>
                             <pre><code>npm install -g claudeinone-cli
 cd your-project
 co init</code></pre>
@@ -260,7 +261,7 @@ co init</code></pre>
                           <div class="cat-list">
                             <div class="skill-item">
                               <span class="skill-name">component-patterns</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Composable React component design: compound components, render props, and composition patterns.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">error-boundaries</span>
@@ -284,7 +285,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">frontend-htmx</span>
-                              <span class="skill-desc">no JavaScript required for common patterns.</span>
+                              <span class="skill-desc">HTMX adds dynamic behavior via HTML attributes — no JavaScript required for common patterns.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">frontend-nextjs</span>
@@ -312,7 +313,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">frontend-solid</span>
-                              <span class="skill-desc">updates are compiled to precise DOM operations for maximum performance.</span>
+                              <span class="skill-desc">SolidJS reactive UI framework — updates compile to precise DOM operations for maximum performance.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">frontend-state-management</span>
@@ -344,7 +345,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">hooks-custom</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Building reusable stateful logic with custom React hooks, patterns, and best practices.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">web-accessibility-wcag</span>
@@ -397,7 +398,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">databases-transactions</span>
-                              <span class="skill-desc">multiple operations succeed together or roll back entirely.</span>
+                              <span class="skill-desc">ACID transactions ensure multiple operations succeed together or roll back entirely.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">db-cassandra</span>
@@ -425,7 +426,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">db-mysql</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Relational database with schemas, indexes, transactions, and replication patterns.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">db-neon</span>
@@ -437,7 +438,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">db-postgresql</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Advanced relational database with JSONB, full-text search, and row-level security.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">db-prisma</span>
@@ -445,7 +446,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">db-redis</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">In-memory key-value store for caching, pub/sub, queues, and session management.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">db-sqlite</span>
@@ -494,15 +495,15 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">cors-security</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Configure cross-origin resource sharing policies to control API access securely.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">jwt-tokens</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Issue, verify, and rotate JSON Web Tokens with proper signing and expiration strategies.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">oauth-integration</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Connect third-party OAuth providers with PKCE, token refresh, and secure callback handling.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">security-encryption</span>
@@ -575,7 +576,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">devops-health-checks</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Liveness and readiness probes, uptime endpoints, and dependency health monitoring.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">devops-kubernetes</span>
@@ -648,7 +649,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">testing-e2e-advanced</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Advanced Playwright patterns: network interception, multi-user flows, and visual regression.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">testing-load-stress</span>
@@ -660,7 +661,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">testing-snapshot</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Capture and compare UI or serialized output snapshots to catch unintended regressions.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">testing-vitest</span>
@@ -685,7 +686,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">ui-a11y</span>
-                              <span class="skill-desc">screen readers, keyboard users, and people with disabilities.</span>
+                              <span class="skill-desc">Accessible UI patterns for screen readers, keyboard users, and people with disabilities.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">ui-framer</span>
@@ -709,7 +710,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">ui-threejs</span>
-                              <span class="skill-desc">for product visualizations, games, and immersive UIs.</span>
+                              <span class="skill-desc">Three.js for 3D rendering — product visualizations, games, and immersive web UIs.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">ui-tokens</span>
@@ -730,7 +731,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">api-documentation</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Write clear, developer-friendly API docs with OpenAPI specs, examples, and changelogs.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">api-graphql</span>
@@ -750,7 +751,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">api-rest-advanced</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Advanced REST patterns: HATEOAS, bulk operations, conditional requests, and idempotency.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">api-rest</span>
@@ -911,7 +912,7 @@ co init</code></pre>
                           <div class="cat-list">
                             <div class="skill-item">
                               <span class="skill-name">tooling-biome</span>
-                              <span class="skill-desc">replaces ESLint + Prettier in one tool.</span>
+                              <span class="skill-desc">Biome — fast all-in-one linter and formatter that replaces ESLint + Prettier.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">tooling-build-tools</span>
@@ -973,7 +974,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">messaging-rabbitmq</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Message broker with queues, exchanges, routing keys, and dead-letter handling.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">nodejs-streams</span>
@@ -981,11 +982,11 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">reactive-programming</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">RxJS observables, streams, operators, and reactive patterns for async data flows.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">realtime-database</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Live data sync with Firebase Realtime Database or Supabase realtime subscriptions.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">realtime-subscriptions</span>
@@ -993,7 +994,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">websocket-server</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Build a WebSocket server with rooms, broadcasts, authentication, and reconnect logic.</span>
                             </div>
                           </div>
                         </div>
@@ -1002,7 +1003,7 @@ co init</code></pre>
                           <div class="cat-list">
                             <div class="skill-item">
                               <span class="skill-name">functional-programming</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Pure functions, immutability, currying, and functional composition patterns in TypeScript.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">patterns-dependency-injection</span>
@@ -1035,7 +1036,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">writing-marketing</span>
-                              <span class="skill-desc">landing pages, emails, and product messaging.</span>
+                              <span class="skill-desc">Copywriting patterns for landing pages, emails, and conversion-focused product messaging.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">writing-technical</span>
@@ -1052,11 +1053,11 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">file-storage</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Upload, store, and serve files with S3, Cloudflare R2, or Supabase Storage.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">http-server</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Configure HTTP servers with middleware, routing, compression, and TLS termination.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">logging-winston</span>
@@ -1064,7 +1065,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">monitoring-apm</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Application performance monitoring with traces, spans, and distributed request tracking.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">monitoring-error-tracking</span>
@@ -1076,7 +1077,7 @@ co init</code></pre>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">sharding-scaling</span>
-                              <span class="skill-desc">Detailed installation and configuration steps for the technology.</span>
+                              <span class="skill-desc">Horizontal partitioning strategies for distributing data across nodes at scale.</span>
                             </div>
                             <div class="skill-item">
                               <span class="skill-name">utilities-date-time</span>
