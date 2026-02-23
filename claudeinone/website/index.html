@@ -63,6 +63,23 @@
         </section>
     </main>
 
+    <div id="docs-window" class="docs-window" hidden>
+        <div class="docs-window-backdrop" data-close-docs="true"></div>
+        <section class="docs-window-panel" role="dialog" aria-modal="true" aria-label="Documentation Window">
+            <header class="docs-window-header">
+                <div class="docs-window-mac">
+                    <button class="docs-window-dot docs-dot-close" type="button" data-close-docs="true" aria-label="Close docs"></button>
+                    <button class="docs-window-dot docs-dot-minimize" type="button" data-close-docs="true" aria-label="Close docs"></button>
+                </div>
+                <div class="docs-window-title">Documentation</div>
+                <div class="docs-window-actions">
+                    <a class="docs-window-link" href="docs.html" target="_blank" rel="noopener noreferrer">Open tab</a>
+                </div>
+            </header>
+            <iframe id="docs-window-frame" class="docs-window-frame" src="about:blank" title="ClaudeInOne Docs"></iframe>
+        </section>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

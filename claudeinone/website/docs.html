@@ -7,6 +7,17 @@
     <title>Docs | claudeinone</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const forcedTheme = params.get("theme");
+        if (forcedTheme === "dark" || forcedTheme === "light") {
+            document.documentElement.setAttribute("data-theme", forcedTheme);
+            document.documentElement.setAttribute("data-theme-lock", forcedTheme);
+        }
+        if (params.get("embed") === "1") {
+            document.documentElement.classList.add("docs-embed");
+        }
+    </script>
 </head>
 <body class="docs-body">
     <div class="terminal-container docs-terminal">
@@ -52,7 +63,6 @@
             </header>
             <div class="docs-main-area">
                 <aside class="docs-sidebar">
-                    <a href="index.html" class="back-link">&larr; Back to Terminal</a>
                     <div class="sb-section">
                         <div class="sb-title">GETTING STARTED</div>
                         <ul class="sb-links">
