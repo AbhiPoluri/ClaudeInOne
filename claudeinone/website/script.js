@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const terminalBody = document.getElementById("terminal");
     const docsWindow = document.getElementById("docs-window");
     const docsWindowFrame = document.getElementById("docs-window-frame");
+    const docsWindowPanel = document.querySelector(".docs-window-panel");
     let closeDocsTimer = null;
 
     const sequence = [
@@ -230,6 +231,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 group._winActiveTimer = setTimeout(() => {
                     group.querySelectorAll(".btn").forEach((btn) => btn.classList.remove("win-active"));
+                    if (typeof target.blur === "function") {
+                        target.blur();
+                    }
                 }, 380);
             });
         });
@@ -269,6 +273,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function closeDocsWindow() {
         if (!docsWindow) return;
         docsWindow.classList.remove("is-open");
+        if (docsWindowPanel) {
+            docsWindowPanel.classList.remove("is-maximized");
+        }
         closeDocsTimer = setTimeout(() => {
             docsWindow.hidden = true;
         }, 260);
@@ -277,12 +284,76 @@ document.addEventListener("DOMContentLoaded", () => {
     if (docsWindow) {
         docsWindow.addEventListener("click", (event) => {
             const target = event.target;
-            if (!(target instanceof HTMLElement)) return;
-            if (target.dataset.closeDocs === "true") {
+            if (!(target instanceof Element)) return;
+            const closeTrigger = target.closest("[data-close-docs='true']");
+            if (closeTrigger) {
                 closeDocsWindow();
             }
         });
     }
+
+    document.querySelectorAll("[data-close-docs='true']").forEach((el) => {
+        el.addEventListener("click", () => {
+            closeDocsWindow();
+        });
+    });
+
+    async function requestFullscreenCompat(element) {
+        if (!element) return;
+        if (element.requestFullscreen) {
+            await element.requestFullscreen();
+            return;
+        }
+        if (element.webkitRequestFullscreen) {
+            element.webkitRequestFullscreen();
+        }
+    }
+
+    async function exitFullscreenCompat() {
+        if (document.exitFullscreen) {
+            await document.exitFullscreen();
+            return;
+        }
+        if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+
+    document.querySelectorAll(".btn.maximize").forEach((btn) => {
+        btn.addEventListener("click", async (event) => {
+            const target = event.currentTarget;
+            if (!(target instanceof HTMLElement)) return;
+
+            // Docs popup maximize toggles panel maximize state.
+            if (target.dataset.maximizeDocs === "true") {
+                if (docsWindowPanel) {
+                    docsWindowPanel.classList.toggle("is-maximized");
+                }
+                return;
+            }
+
+            // Main/docs terminal maximize toggles browser fullscreen.
+            const container = target.closest(".terminal-container");
+            if (!container) return;
+
+            const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement;
+            try {
+                if (!fullscreenElement) {
+                    const hasFullscreenApi = !!(container.requestFullscreen || container.webkitRequestFullscreen);
+                    if (hasFullscreenApi) {
+                        await requestFullscreenCompat(container);
+                    } else {
+                        container.classList.toggle("is-maximized");
+                    }
+                } else {
+                    await exitFullscreenCompat();
+                }
+            } catch (_) {
+                // Fallback: still maximize container if fullscreen API is unavailable/blocked.
+                container.classList.toggle("is-maximized");
+            }
+        });
+    });
 
     function getCurrentTheme() {
         return document.documentElement.getAttribute("data-theme") || "dark";

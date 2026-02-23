@@ -76,6 +76,16 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.terminal-container.is-maximized {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  border-radius: 0;
+  z-index: 40;
+}
+
 .terminal-header {
   display: flex;
   align-items: center;
@@ -94,6 +104,7 @@ body {
   height: 12px;
   border-radius: 50%;
   display: inline-block;
+  transition: transform 140ms ease, filter 180ms ease, background-color 140ms ease;
 }
 
 .btn.close {
@@ -106,6 +117,48 @@ body {
 
 .btn.maximize {
   background-color: var(--mac-green);
+}
+
+/* Mac-like control hover: reveal glyphs instead of lift animation */
+:root:not([data-os="windows"]) .mac-buttons .btn {
+  position: relative;
+}
+
+:root:not([data-os="windows"]) .mac-buttons .btn::after {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(35, 35, 35, 0.88);
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 140ms ease, color 140ms ease;
+}
+
+:root:not([data-os="windows"]) .mac-buttons .btn.close::after {
+  content: "\00D7";
+  font-size: 9px;
+}
+
+:root:not([data-os="windows"]) .mac-buttons .btn.minimize::after {
+  content: "\2212";
+  font-size: 10px;
+}
+
+:root:not([data-os="windows"]) .mac-buttons .btn.maximize::after {
+  content: "\002B";
+  font-size: 8px;
+}
+
+:root:not([data-os="windows"]) .mac-buttons:hover .btn::after {
+  opacity: 1;
+}
+
+:root:not([data-os="windows"]) .mac-buttons .btn:hover {
+  filter: brightness(0.97);
 }
 
 .terminal-title {
@@ -127,36 +180,62 @@ body {
 }
 
 :root[data-os="windows"] .btn {
-  width: 42px;
-  height: 30px;
+  width: 46px;
+  height: 32px;
   border-radius: 0;
   background: transparent;
   position: relative;
+  border: none;
+  transition: background-color 140ms ease, transform 120ms ease;
+  outline: none;
 }
 
 :root[data-os="windows"] .btn::before {
+  content: "";
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: currentColor;
   color: var(--text-muted);
-  font-size: 13px;
-  line-height: 1;
 }
 
 :root[data-os="windows"] .btn.minimize::before {
-  content: "\2212";
+  width: 10px;
+  height: 1.5px;
+  border-radius: 1px;
+  transform: translate(-50%, -50%);
 }
 
 :root[data-os="windows"] .btn.maximize::before {
-  content: "\25A1";
-  font-size: 10px;
+  width: 10px;
+  height: 8px;
+  background: transparent;
+  border: 1.5px solid currentColor;
+  border-radius: 1px;
+}
+
+:root[data-os="windows"] .btn.close::before,
+:root[data-os="windows"] .btn.close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 1.5px;
+  border-radius: 1px;
+  background: currentColor;
+  color: var(--text-muted);
+  transform-origin: center;
+  transition: background-color 140ms ease;
 }
 
 :root[data-os="windows"] .btn.close::before {
-  content: "\00D7";
-  font-size: 15px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+:root[data-os="windows"] .btn.close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 :root[data-os="windows"] .btn.minimize {
@@ -172,15 +251,18 @@ body {
 }
 
 :root[data-os="windows"] .btn:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-0.5px);
 }
 
 :root[data-os="windows"] .btn.close:hover {
-  background: #d92d20;
+  background: #e81123;
 }
 
-:root[data-os="windows"] .btn.close:hover::before {
+:root[data-os="windows"] .btn.close:hover::before,
+:root[data-os="windows"] .btn.close:hover::after {
   color: #fff;
+  background: #fff;
 }
 
 :root[data-os="windows"] .terminal-title {
@@ -194,15 +276,17 @@ body {
 }
 
 :root[data-os="windows"] .btn.win-active {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(0);
 }
 
 :root[data-os="windows"] .btn.close.win-active {
-  background: #d92d20;
+  background: #e81123;
 }
 
-:root[data-os="windows"] .btn.close.win-active::before {
-  color: #fff;
+:root[data-os="windows"] .btn.close.win-active::before,
+:root[data-os="windows"] .btn.close.win-active::after {
+  background: #fff;
 }
 
 :root[data-os="windows"] .docs-window-header {
@@ -383,6 +467,17 @@ body {
   transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+.docs-window-panel.is-maximized {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  transform: none;
+}
+
 .docs-window-header {
   height: 52px;
   padding: 0 14px;
@@ -405,7 +500,13 @@ body {
   cursor: pointer;
 }
 
-/* Keep original mac-style popup controls: close + minimize only */
+/* Docs page/window titlebar controls should not use hand cursor */
+body.docs-body .terminal-header .btn,
+.docs-window .docs-window-header .btn {
+  cursor: default !important;
+}
+
+/* Keep mac-style popup control order: close, minimize, maximize */
 :root:not([data-os="windows"]) .docs-window-mac .btn.close {
   order: 1;
 }
@@ -415,7 +516,7 @@ body {
 }
 
 :root:not([data-os="windows"]) .docs-window-mac .btn.maximize {
-  display: none;
+  order: 3;
 }
 
 .docs-window-title {
@@ -467,6 +568,10 @@ body {
 
 .docs-window.is-open .docs-window-panel {
   transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.docs-window.is-open .docs-window-panel.is-maximized {
+  transform: none;
 }
 
 .docs-window.is-open .docs-window-frame {
